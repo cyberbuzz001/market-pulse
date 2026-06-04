@@ -67,7 +67,7 @@ export async function getAngelOneSession() {
       'Accept': 'application/json',
       'X-UserType': 'USER',
       'X-SourceID': 'WEB',
-      'X-ClientIP': '192.168.1.1',
+      'X-ClientIP': '122.181.101.159',
       'X-MACAddress': '00:00:00:00:00:00',
       'X-PrivateKey': apiKey
     },
@@ -104,7 +104,7 @@ export async function getLiveStockQuotes(tokens: string[]) {
         'X-PrivateKey': session.apiKey,
         'X-UserType': 'USER',
         'X-SourceID': 'WEB',
-        'X-ClientIP': '192.168.1.1',
+        'X-ClientIP': '122.181.101.159',
         'X-MACAddress': '00:00:00:00:00:00'
       },
       body: JSON.stringify({
