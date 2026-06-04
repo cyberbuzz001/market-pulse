@@ -10,7 +10,7 @@ export default function ContactUs() {
         <h1 style={{ fontSize: '2.5rem', marginBottom: '24px' }}>Contact Us</h1>
         <div className="prose">
           <p>
-            Have a question, feedback, or a news tip? We'd love to hear from you. At Expert's MarketPulse, we are dedicated to providing the most accurate and up-to-date Indian stock market news. Your feedback helps us improve our coverage.
+            Have a question, feedback, or a news tip? We'd love to hear from you. At Expert's MarketPulse (operated by <strong>SHREESVARN FINNOVOTION PRIVATE LIMITED</strong>), we are dedicated to providing the most accurate and up-to-date Indian stock market news. Your feedback helps us improve our coverage.
           </p>
           
           <div style={{ marginTop: '32px', background: 'var(--secondary)', padding: '24px', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>

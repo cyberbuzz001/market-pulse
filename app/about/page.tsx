@@ -10,7 +10,7 @@ export default function About() {
         <h1 style={{ fontSize: '2.5rem', marginBottom: '24px' }}>About Expert's MarketPulse</h1>
         <div className="prose">
           <p>
-            Welcome to <strong>Expert's MarketPulse</strong>, India's premier destination for real-time stock market insights, deep-dive company analysis, and comprehensive coverage of the NSE and BSE.
+            Welcome to <strong>Expert's MarketPulse</strong> (a property of <strong>SHREESVARN FINNOVOTION PRIVATE LIMITED</strong>), India's premier destination for real-time stock market insights, deep-dive company analysis, and comprehensive coverage of the NSE and BSE.
           </p>
           <p>
             Our mission is to empower retail investors, financial professionals, and market enthusiasts with highly accurate, data-driven, and unbiased news. In a market flooded with noise, we provide clarity.
@@ -35,7 +35,7 @@ export default function About() {
           <div style={{ marginTop: '24px', padding: '20px', borderLeft: '4px solid var(--primary)', background: 'var(--secondary)', borderRadius: '0 8px 8px 0' }}>
             <h4 style={{ margin: '0 0 8px 0', color: 'var(--foreground)' }}>SEBI Regulatory Disclaimer</h4>
             <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-              Expert's MarketPulse is an independent financial education portal. We are NOT a SEBI-registered investment advisor. Under no circumstances does any information posted on this site represent a recommendation to buy or sell securities. Investments in the securities market are subject to market risks.
+              Expert's MarketPulse and SHREESVARN FINNOVOTION PRIVATE LIMITED are independent financial education portals. We are NOT a SEBI-registered investment advisor. Under no circumstances does any information posted on this site represent a recommendation to buy or sell securities. Investments in the securities market are subject to market risks.
             </p>
           </div>
         </div>
