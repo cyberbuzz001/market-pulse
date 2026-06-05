@@ -116,3 +116,11 @@ a {
 .post-content li { margin-bottom: 0.5rem; }
 .post-content strong { color: var(--foreground); }
 .post-content blockquote { border-left: 4px solid var(--primary); padding-left: 1rem; margin-left: 0; color: var(--foreground); font-style: italic; background: var(--glass-bg); padding: 1rem; border-radius: 0 8px 8px 0; }
+
+/* Restored Layout Classes */
+.header { position: relative; z-index: 100; }
+.glass { background: var(--glass-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--glass-border); }
+.footer { padding: 60px 0; border-top: 1px solid var(--glass-border); margin-top: 60px; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; }
+.logo { font-size: 1.5rem; font-weight: 800; background: linear-gradient(to right, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.05em; }
+.nav-link { font-size: 0.95rem; font-weight: 500; color: var(--text-normal); transition: color 0.2s; }
+.nav-link:hover { color: var(--foreground); }
