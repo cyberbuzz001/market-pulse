@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Expert's MarketPulse
 
-## Getting Started
+Expert's MarketPulse is a **Fully Autonomous, AI-Driven Financial Intelligence Portal**. 
+It continuously scrapes the internet for financial news, integrates live stock market quotes via Angel One's SmartAPI, writes professional algorithmic journalism using Google's Gemini Flash model, generates high-end cinematic cover images using Cloudflare's AI, and pushes itself to production 5 times a day.
 
-First, run the development server:
+## Architecture & Automation
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 1. The Autonomous Engine (`app/api/auto-post/route.ts`)
+The entire blog writes itself. 
+- **Vercel Cron** wakes up the API route at 8 AM, 12 PM, 4:30 PM, 9 PM, and 1 AM (IST).
+- The route fetches live stock market quotes (Nifty, Sensex, Reliance, etc.) from **Angel One**.
+- It asks **Gemini (Google Search Grounded)** to crawl the web for the latest global and domestic financial news based on the time of day.
+- It calls **Cloudflare Workers AI (`flux-1-schnell`)** to generate a cinematic, 8k resolution stock market image.
+- It packages the image and the AI-written markdown article and commits them directly to **GitHub**.
+- **Vercel** automatically detects the new commit and statically builds the new site.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. High-Tech Glassmorphic UI
+The frontend is built with Next.js App Router and a custom pure-CSS aesthetic.
+- Deep dark navy backgrounds with Neon Cyan (`#00f0ff`) and Neon Emerald (`#00e676`) accents.
+- 3D physical hover effects, dynamic blurred glassmorphism, and ambient glowing meshes.
+- Typography powered by Google's `Inter` and `Space Grotesk`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Core Features
+- **Market Dashboard**: Heatmaps and live index tracking.
+- **Stock Screener**: An interactive search page displaying PE ratios, market caps, and live quotes.
+- **Push Notifications & Subscribe**: Integrated UI to collect user emails and WhatsApp numbers.
+- **SEO Optimized**: Fully automated XML Sitemap (`/sitemap.xml`) and RSS 2.0 Feed (`/feed.xml`) generation on every build.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment Setup
 
-## Learn More
+To host this repository, you must set the following **Environment Variables** in Vercel:
 
-To learn more about Next.js, take a look at the following resources:
+| Variable | Description |
+| -------- | ----------- |
+| `GEMINI_API_KEY` | Your Google AI Studio API key (Pay-as-you-go tier required for Search Grounding). |
+| `GITHUB_TOKEN` | GitHub Personal Access Token (classic) with `repo` scope to push markdown files. |
+| `CRON_SECRET` | A secure string matched in the Vercel cron configuration to prevent unauthorized API execution. |
+| `CF_ACCOUNT_ID` | Cloudflare Account ID for Image generation. |
+| `CF_API_TOKEN` | Cloudflare Workers AI Token. |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Legal Compliance
+The platform includes built-in `/disclaimer`, `/privacy`, and a hardcoded SEBI disclaimer in the footer to clarify that the AI-generated news is for educational and simulation purposes only.
