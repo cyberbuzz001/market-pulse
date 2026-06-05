@@ -4,6 +4,7 @@ import MarketTicker from '../components/MarketTicker';
 import PortfolioTracker from '../components/PortfolioTracker';
 import HeaderNavigation from '../components/HeaderNavigation';
 import PushNotifications from '../components/PushNotifications';
+import NewsletterForm from '../components/NewsletterForm';
 import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -69,10 +70,25 @@ export default function RootLayout({
               <li style={{ marginTop: '12px' }}><Link href="/dashboard" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: 600 }}>Market Dashboard</Link></li>
               <li><Link href="/ipos" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: 600 }}>IPO Calendar</Link></li>
               <li><Link href="/mutual-funds-explorer" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: 600 }}>Mutual Funds Explorer</Link></li>
-              <li><Link href="/earnings" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: 600 }}>Earnings Calendar</Link></li>
-              <li><Link href="/alerts" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: 600 }}>Regulatory Alerts</Link></li>
-              <li><Link href="/archive" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: 600 }}>Email Archive</Link></li>
-            </ul>
+          <div style={{ display: 'flex', gap: '40px', flexWrap: 'wrap' }}>
+            <div style={{ flex: 1, minWidth: '200px' }}>
+              <h4 style={{ color: 'var(--foreground)', marginBottom: '16px' }}>Legal & Utility</h4>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <li><Link href="/about" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>About Us</Link></li>
+                <li><Link href="/contact" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Contact Us</Link></li>
+                <li><Link href="/privacy" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Privacy Policy</Link></li>
+                <li><Link href="/disclaimer" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Disclaimer</Link></li>
+                <li style={{ marginTop: '12px' }}><Link href="/dashboard" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: 600 }}>Market Dashboard</Link></li>
+                <li><Link href="/ipos" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: 600 }}>IPO Calendar</Link></li>
+                <li><Link href="/mutual-funds-explorer" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: 600 }}>Mutual Funds Explorer</Link></li>
+                <li><Link href="/earnings" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: 600 }}>Earnings Calendar</Link></li>
+                <li><Link href="/alerts" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: 600 }}>Regulatory Alerts</Link></li>
+                <li><Link href="/archive" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: 600 }}>Email Archive</Link></li>
+              </ul>
+            </div>
+            <div style={{ flex: 1, minWidth: '250px' }}>
+              <NewsletterForm />
+            </div>
           </div>
           <p style={{ marginTop: '16px', fontSize: '0.85rem' }}>&copy; {new Date().getFullYear()} Expert's MarketPulse. Fully Automated Stock Market Blog.</p>
           <div style={{ marginTop: '24px', padding: '16px 20px', borderTop: '1px solid var(--glass-border)', fontSize: '0.75rem', color: 'var(--text-dim)', textAlign: 'left', lineHeight: '1.4' }}>
