@@ -44,32 +44,41 @@ async function handleAutoPost(req: Request) {
 
     const dateStr = new Date().toISOString().split('T')[0];
 
-    // 2. Generate Image using Imagen API
+    // 2. Generate Image using Cloudflare AI
     let coverImageUrl = "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80";
     let imageBase64 = null;
     let imageFilename = null;
 
     try {
-      const imagenResponse = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-001:predict?key=${GEMINI_API_KEY}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          instances: [{ prompt: `A highly professional, photorealistic, cinematic image representing the Indian stock market, Dalal street, finance, ${edition}. Dark mode aesthetic with glowing green and red ticker elements, incredibly detailed, 8k resolution, corporate style.` }],
-          parameters: { sampleCount: 1, aspectRatio: "16:9" }
-        })
-      });
+      const CF_ACCOUNT_ID = process.env.CF_ACCOUNT_ID;
+      const CF_API_TOKEN = process.env.CF_API_TOKEN;
 
-      const imagenData = await imagenResponse.json();
-      if (imagenData.predictions && imagenData.predictions[0]?.bytesBase64Encoded) {
-        imageBase64 = imagenData.predictions[0].bytesBase64Encoded;
-        imageFilename = `post-img-${Date.now()}.png`;
-        coverImageUrl = `/images/${imageFilename}`;
-        console.log("Successfully generated AI image via Imagen.");
+      if (CF_ACCOUNT_ID && CF_API_TOKEN) {
+        const cfResponse = await fetch(`https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/ai/run/@cf/black-forest-labs/flux-1-schnell`, {
+          method: 'POST',
+          headers: { 
+            'Authorization': `Bearer ${CF_API_TOKEN}`,
+            'Content-Type': 'application/json' 
+          },
+          body: JSON.stringify({
+            prompt: `A highly professional, photorealistic, cinematic image representing the Indian stock market, Dalal street, finance, ${edition}. Dark mode aesthetic with glowing green and red ticker elements, incredibly detailed, 8k resolution, corporate style.`
+          })
+        });
+
+        if (cfResponse.ok) {
+          const buffer = await cfResponse.arrayBuffer();
+          imageBase64 = Buffer.from(buffer).toString('base64');
+          imageFilename = `post-img-${Date.now()}.png`;
+          coverImageUrl = `/images/${imageFilename}`;
+          console.log("Successfully generated AI image via Cloudflare.");
+        } else {
+          console.warn("Cloudflare AI generation failed:", await cfResponse.text());
+        }
       } else {
-        console.warn("Imagen generation failed (possibly free tier limit):", JSON.stringify(imagenData));
+        console.warn("Cloudflare API credentials missing. Falling back to default image.");
       }
     } catch (imgErr) {
-      console.warn("Error calling Imagen API:", imgErr);
+      console.warn("Error calling Cloudflare API:", imgErr);
     }
 
     // 3. Ask Gemini to write an article using Google Search Grounding
