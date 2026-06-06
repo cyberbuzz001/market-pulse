@@ -67,11 +67,15 @@ async function handleAutoPost(req: Request) {
         });
 
         if (cfResponse.ok) {
-          const buffer = await cfResponse.arrayBuffer();
-          imageBase64 = Buffer.from(buffer).toString('base64');
-          imageFilename = `post-img-${Date.now()}.png`;
-          coverImageUrl = `/images/${imageFilename}`;
-          console.log("Successfully generated AI image via Cloudflare.");
+          const data = await cfResponse.json();
+          if (data.result && data.result.image) {
+            imageBase64 = data.result.image;
+            imageFilename = `post-img-${Date.now()}.png`;
+            coverImageUrl = `/images/${imageFilename}`;
+            console.log("Successfully generated AI image via Cloudflare.");
+          } else {
+            console.warn("Cloudflare AI image generation succeeded but no image was returned.");
+          }
         } else {
           console.warn("Cloudflare AI generation failed:", await cfResponse.text());
         }
