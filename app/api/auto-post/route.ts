@@ -16,9 +16,10 @@ async function handleAutoPost(req: Request) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-    if (!GEMINI_API_KEY) {
-      return NextResponse.json({ error: 'Gemini API key missing' }, { status: 500 });
+    const CF_ACCOUNT_ID = process.env.CF_ACCOUNT_ID;
+    const CF_API_TOKEN = process.env.CF_API_TOKEN;
+    if (!CF_ACCOUNT_ID || !CF_API_TOKEN) {
+      return NextResponse.json({ error: 'Cloudflare API credentials missing' }, { status: 500 });
     }
 
     // 1. Fetch live market data (Angel One Fallback)
@@ -81,11 +82,10 @@ async function handleAutoPost(req: Request) {
       console.warn("Error calling Cloudflare API:", imgErr);
     }
 
-    // 3. Ask Gemini to write an article using Google Search Grounding
+    // 3. Ask Cloudflare AI to write an article
     const prompt = `You are an elite, highly experienced financial journalist writing for "Expert's MarketPulse", a premium Indian stock market portal.
     
 Write a highly professional, in-depth financial article for the ${edition}.
-You MUST use the Google Search tool to find the absolute latest, real-time news about the NSE/BSE, Indian economy, and global markets. DO NOT hallucinate.
 
 Use the following Angel One live data if available:
 ${marketDataContext}
@@ -108,22 +108,22 @@ excerpt: "A punchy, one-sentence summary of the main market driver."
 ---
 [Body of the article in pristine Markdown format here]`;
 
-    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${GEMINI_API_KEY}`, {
+    const response = await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CF_ACCOUNT_ID}/ai/run/@cf/meta/llama-3.1-8b-instruct`, {
       method: 'POST',
       headers: {
+        'Authorization': `Bearer ${process.env.CF_API_TOKEN}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        contents: [{ parts: [{ text: prompt }] }],
-        tools: [{ googleSearch: {} }]
+        messages: [{ role: "user", content: prompt }]
       })
     });
 
     const data = await response.json();
-    let markdownContent = data.candidates?.[0]?.content?.parts?.[0]?.text;
+    let markdownContent = data.result?.response;
 
     if (!markdownContent) {
-      console.error("Gemini failed:", JSON.stringify(data));
+      console.error("Cloudflare AI text generation failed:", JSON.stringify(data));
       return NextResponse.json({ error: 'Failed to generate text content', details: data }, { status: 500 });
     }
 

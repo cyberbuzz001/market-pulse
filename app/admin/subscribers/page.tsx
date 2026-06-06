@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const revalidate = 0; // Disable caching for the admin page
 
 export default async function AdminSubscribersPage() {
-  let subscribers = [];
+  let subscribers: any[] = [];
   let error = null;
 
   try {
