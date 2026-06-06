@@ -45,7 +45,62 @@ async function handleAutoPost(req: Request) {
 
     const dateStr = new Date().toISOString().split('T')[0];
 
-    // 2. Generate Image using Cloudflare AI
+    // 2. Ask Cloudflare AI to write an article
+    const prompt = `You are an elite, highly experienced financial journalist writing for "Expert's MarketPulse", a premium Indian stock market portal.
+    
+Write a highly professional, in-depth financial article for the ${edition}.
+
+Use the following Angel One live data if available:
+${marketDataContext}
+
+CRITICAL WRITING GUIDELINES:
+- Write like a human Wall Street/Dalal Street analyst. 
+- DO NOT use AI jargon like "In conclusion", "It is important to note", "Delve into", "Navigating the landscape", or "A testament to".
+- Use strong, declarative sentences. Be authoritative and analytical.
+- Break down complex news into readable paragraphs and bullet points.
+
+Format the response EXACTLY as a markdown file with frontmatter.
+
+Format:
+---
+title: "A Catchy, Professional Headline Here"
+date: "${dateStr}"
+category: "Market News"
+coverImage: "[COVER_IMAGE_URL]"
+excerpt: "A punchy, one-sentence summary of the main market driver."
+---
+[Body of the article in pristine Markdown format here]`;
+
+    const cfTextResponse = await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CF_ACCOUNT_ID}/ai/run/@cf/meta/llama-3.1-8b-instruct`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${process.env.CF_API_TOKEN}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        messages: [{ role: "user", content: prompt }]
+      })
+    });
+
+    const textData = await cfTextResponse.json();
+    let markdownContent = textData.result?.response;
+
+    if (!markdownContent) {
+      console.error("Cloudflare AI text generation failed:", JSON.stringify(textData));
+      return NextResponse.json({ error: 'Failed to generate text content', details: textData }, { status: 500 });
+    }
+
+    markdownContent = markdownContent.replace(/^```markdown/g, '').replace(/```$/g, '').trim();
+
+    const titleMatch = markdownContent.match(/title:\s*"([^"]+)"/);
+    if (!titleMatch) {
+      return NextResponse.json({ error: 'Failed to parse title' }, { status: 500 });
+    }
+    
+    const slug = titleMatch[1].toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+    const filename = `${slug}.md`;
+
+    // 3. Generate Image using Cloudflare AI
     let coverImageUrl = "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80";
     let imageBase64 = null;
     let imageFilename = null;
@@ -62,7 +117,7 @@ async function handleAutoPost(req: Request) {
             'Content-Type': 'application/json' 
           },
           body: JSON.stringify({
-            prompt: `A highly professional, photorealistic, cinematic image representing the Indian stock market, Dalal street, finance, ${edition}. Dark mode aesthetic with glowing green and red ticker elements, incredibly detailed, 8k resolution, corporate style.`
+            prompt: `A highly professional, photorealistic, cinematic image representing the stock market news headline: "${titleMatch[1]}". ${edition}. Dark mode aesthetic with glowing green and red ticker elements, incredibly detailed, 8k resolution, corporate style.`
           })
         });
 
@@ -86,60 +141,7 @@ async function handleAutoPost(req: Request) {
       console.warn("Error calling Cloudflare API:", imgErr);
     }
 
-    // 3. Ask Cloudflare AI to write an article
-    const prompt = `You are an elite, highly experienced financial journalist writing for "Expert's MarketPulse", a premium Indian stock market portal.
-    
-Write a highly professional, in-depth financial article for the ${edition}.
-
-Use the following Angel One live data if available:
-${marketDataContext}
-
-CRITICAL WRITING GUIDELINES:
-- Write like a human Wall Street/Dalal Street analyst. 
-- DO NOT use AI jargon like "In conclusion", "It is important to note", "Delve into", "Navigating the landscape", or "A testament to".
-- Use strong, declarative sentences. Be authoritative and analytical.
-- Break down complex news into readable paragraphs and bullet points.
-
-Format the response EXACTLY as a markdown file with frontmatter.
-
-Format:
----
-title: "A Catchy, Professional Headline Here"
-date: "${dateStr}"
-category: "Market News"
-coverImage: "${coverImageUrl}"
-excerpt: "A punchy, one-sentence summary of the main market driver."
----
-[Body of the article in pristine Markdown format here]`;
-
-    const response = await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CF_ACCOUNT_ID}/ai/run/@cf/meta/llama-3.1-8b-instruct`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${process.env.CF_API_TOKEN}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        messages: [{ role: "user", content: prompt }]
-      })
-    });
-
-    const data = await response.json();
-    let markdownContent = data.result?.response;
-
-    if (!markdownContent) {
-      console.error("Cloudflare AI text generation failed:", JSON.stringify(data));
-      return NextResponse.json({ error: 'Failed to generate text content', details: data }, { status: 500 });
-    }
-
-    markdownContent = markdownContent.replace(/^```markdown/g, '').replace(/```$/g, '').trim();
-
-    const titleMatch = markdownContent.match(/title:\s*"([^"]+)"/);
-    if (!titleMatch) {
-      return NextResponse.json({ error: 'Failed to parse title' }, { status: 500 });
-    }
-    
-    const slug = titleMatch[1].toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-    const filename = `${slug}.md`;
+    markdownContent = markdownContent.replace("[COVER_IMAGE_URL]", coverImageUrl);
     
     // 4. Save to GitHub (Image first, then Markdown)
     const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
