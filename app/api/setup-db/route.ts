@@ -1,7 +1,12 @@
 import { sql } from '@vercel/postgres';
 import { NextResponse } from 'next/server';
 
-export async function GET() {
+export async function GET(request: Request) {
+  const authHeader = request.headers.get('authorization');
+  if (authHeader !== `Bearer ${process.env.GEMINI_API_KEY}`) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
   try {
     const result = await sql`
       CREATE TABLE IF NOT EXISTS subscribers (

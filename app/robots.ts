@@ -13,6 +13,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://expertsmarketpulse.in/sitemap.xml',
+    sitemap: 'https://blog.shreesvarn.in/sitemap.xml',
   };
 }

@@ -52,7 +52,7 @@ export async function getPostData(slug: string): Promise<PostData> {
   const matterResult = matter(fileContents);
 
   const processedContent = await remark()
-    .use(html)
+    .use(html, { sanitize: true })
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
 

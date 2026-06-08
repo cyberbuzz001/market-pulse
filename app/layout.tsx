@@ -13,7 +13,7 @@ export const metadata = {
   title: 'Expert\'s MarketPulse - Premium Stock Market Insights',
   description: 'Daily automated stock market news, company insights, crypto updates, and more.',
   alternates: {
-    canonical: 'https://expertsmarketpulse.in',
+    canonical: 'https://blog.shreesvarn.in',
   }
 };
 
@@ -31,7 +31,7 @@ export default function RootLayout({
             '@context': 'https://schema.org',
             '@type': 'Organization',
             name: "Expert's MarketPulse",
-            url: 'https://expertsmarketpulse.in',
+            url: 'https://blog.shreesvarn.in',
             description: 'India\'s premier automated stock market intelligence portal',
             sameAs: [],
           }) }}
@@ -42,10 +42,10 @@ export default function RootLayout({
             '@context': 'https://schema.org',
             '@type': 'WebSite',
             name: "Expert's MarketPulse",
-            url: 'https://expertsmarketpulse.in',
+            url: 'https://blog.shreesvarn.in',
             potentialAction: {
               '@type': 'SearchAction',
-              target: 'https://expertsmarketpulse.in/search?q={search_term_string}',
+              target: 'https://blog.shreesvarn.in/search?q={search_term_string}',
               'query-input': 'required name=search_term_string',
             },
           }) }}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap');
 
 :root {
   /* High-Tech Neon Dark Palette */
@@ -15,6 +15,24 @@
   --glass-bg: rgba(255, 255, 255, 0.02);
   --glass-border: rgba(255, 255, 255, 0.06);
   --glass-hover: rgba(255, 255, 255, 0.05);
+  --text-normal: #d1d5db;
+  --text-dim: #6b7280;
+}
+
+[data-theme="light"] {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --primary: #0891b2;
+  --primary-glow: rgba(8, 145, 178, 0.3);
+  --secondary: #e2e8f0;
+  --accent: #059669;
+  --negative: #dc2626;
+  --text-muted: #64748b;
+  --text-normal: #334155;
+  --text-dim: #94a3b8;
+  --glass-bg: rgba(0, 0, 0, 0.02);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-hover: rgba(0, 0, 0, 0.04);
 }
 
 * {
