@@ -145,8 +145,8 @@ excerpt: "A punchy, one-sentence summary of the main market driver."
       console.warn("Error calling Cloudflare API:", imgErr);
     }
 
-    markdownContent = markdownContent.replace("[COVER_IMAGE_URL]", coverImageUrl);
-    
+    // Replace whatever is in coverImage: "..." with the actual coverImageUrl using regex
+    markdownContent = markdownContent.replace(/^coverImage:\s*.*$/m, `coverImage: "${coverImageUrl}"`);
     // 4. Save to GitHub (Image first, then Markdown)
     const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
     if (GITHUB_TOKEN) {

@@ -2,7 +2,7 @@
 title: "Market Pulse: Indian Stocks Tumble Amid Global Economic Uncertainty"
 date: "2026-06-08"
 category: "Market News"
-coverImage: "https://example.com/cover-image.jpg"
+coverImage: "/images/post-img-1780894999155.png"
 excerpt: "Indian stocks experience a significant decline as global economic uncertainty weighs on investor sentiment."
 ---
 

@@ -2,7 +2,7 @@
 title: "Market Pulse: Indian Equities Suffer Amid Global Headwinds"
 date: "2026-06-08"
 category: "Market News"
-coverImage: "https://example.com/cover-image.jpg"
+coverImage: "/images/post-img-1780901482865.png"
 excerpt: "Indian equities decline as global markets struggle with inflation concerns and interest rate hikes."
 ---
 
