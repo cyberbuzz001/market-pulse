@@ -44,6 +44,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.3,
     },
+    ...Array.from(new Set(posts.map(p => p.category.toLowerCase().replace(/[^a-z0-9]+/g, '-')))).map(cat => ({
+      url: `${BASE_URL}/category/${cat}`,
+      lastModified: new Date(),
+      changeFrequency: 'daily' as const,
+      priority: 0.7,
+    })),
     ...postUrls,
   ];
 }
