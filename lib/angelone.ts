@@ -47,6 +47,8 @@ export function generateTOTP(secret: string): string {
   return otp.toString().padStart(6, '0');
 }
 
+let cachedSession: { jwtToken: string; feedToken: string; apiKey: string; expiry: number } | null = null;
+
 // Authenticate session on Angel One SmartAPI
 export async function getAngelOneSession() {
   const clientCode = process.env.ANGEL_ONE_CLIENT_CODE;
@@ -56,6 +58,11 @@ export async function getAngelOneSession() {
 
   if (!clientCode || !password || !totpSecret || !apiKey) {
     throw new Error('Missing Angel One credentials in environment variables');
+  }
+
+  // Use cached session if valid (Angel One tokens usually last for the day, but we'll cache for 55 mins)
+  if (cachedSession && Date.now() < cachedSession.expiry) {
+    return cachedSession;
   }
 
   const totp = generateTOTP(totpSecret);
@@ -83,11 +90,14 @@ export async function getAngelOneSession() {
     throw new Error('Angel One authentication failed: ' + JSON.stringify(data));
   }
 
-  return {
+  cachedSession = {
     jwtToken: data.data.jwtToken,
     feedToken: data.data.feedToken,
-    apiKey
+    apiKey,
+    expiry: Date.now() + 55 * 60 * 1000 // 55 minutes
   };
+
+  return cachedSession;
 }
 
 // Query live stock details from Angel One SmartAPI using NSE tokens

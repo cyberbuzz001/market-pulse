@@ -12,10 +12,19 @@ const TOKEN_MAPPING: Record<string, string> = {
   TATAMOTORS: '3456'
 };
 
+let cache: { data: any; timestamp: number } | null = null;
+const CACHE_TTL = 10_000; // 10 seconds
+
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
     const symbolsParam = searchParams.get('symbols');
+    
+    // Only use cache if no specific symbols are requested (default fetch all)
+    if (!symbolsParam && cache && Date.now() - cache.timestamp < CACHE_TTL) {
+      return NextResponse.json({ success: true, data: cache.data, cached: true });
+    }
+
     
     let symbolsToFetch = Object.keys(TOKEN_MAPPING);
     if (symbolsParam) {
@@ -62,7 +71,11 @@ export async function GET(request: Request) {
       }
     });
 
-    return NextResponse.json({ success: true, data: result });
+    if (!symbolsParam) {
+      cache = { data: result, timestamp: Date.now() };
+    }
+
+    return NextResponse.json({ success: true, data: result, cached: false });
   } catch (error: any) {
     console.error('Error in market-data API route:', error);
     return NextResponse.json({ error: error.message || 'Internal Server Error' }, { status: 500 });

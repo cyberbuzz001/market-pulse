@@ -5,8 +5,7 @@ import Link from 'next/link';
 
 export default function MarketTicker() {
   const [liveData, setLiveData] = useState<Record<string, any>>({});
-  const [nifty, setNifty] = useState({ value: 23500.50, change: 125.30, percent: 0.54 });
-  const [sensex, setSensex] = useState({ value: 77200.15, change: 450.80, percent: 0.59 });
+  const [isLive, setIsLive] = useState(false);
 
   useEffect(() => {
     // Fetch live quotes immediately and poll every 10 seconds
@@ -16,6 +15,7 @@ export default function MarketTicker() {
         const json = await res.json();
         if (json.success && json.data) {
           setLiveData(json.data);
+          setIsLive(true);
         }
       } catch (err) {
         console.error('Failed to fetch live quotes for ticker:', err);
@@ -25,58 +25,32 @@ export default function MarketTicker() {
     fetchLiveQuotes();
     const liveInterval = setInterval(fetchLiveQuotes, 10000);
 
-    // Keep simulated indexes moving for visual effect
-    const simInterval = setInterval(() => {
-      setNifty(prev => ({
-        ...prev,
-        value: prev.value + (Math.random() * 10 - 5),
-      }));
-      setSensex(prev => ({
-        ...prev,
-        value: prev.value + (Math.random() * 30 - 15),
-      }));
-    }, 5000);
-
     return () => {
       clearInterval(liveInterval);
-      clearInterval(simInterval);
     };
   }, []);
 
-  const getTickerData = (symbol: string, defaultVal: string, defaultChange: number, defaultPercent: string) => {
-    const live = liveData[symbol];
-    if (live) {
-      return {
-        value: live.price.toFixed(2),
-        change: live.change,
-        percent: live.percent.toFixed(2),
-        isUp: live.isUp
-      };
-    }
-    return {
-      value: defaultVal,
-      change: defaultChange,
-      percent: defaultPercent,
-      isUp: defaultChange >= 0
-    };
-  };
-
-  const rel = getTickerData('RELIANCE', '2985.40', 92.30, '3.20');
-  const tcs = getTickerData('TCS', '4105.10', 112.50, '2.80');
-  const hdfc = getTickerData('HDFCBANK', '1650.00', 24.50, '1.50');
-  const infy = getTickerData('INFY', '1480.90', 17.55, '1.20');
-  const itc = getTickerData('ITC', '425.60', -7.80, '1.80');
-
-  const tickerItems = [
-    { name: 'NIFTY 50', value: nifty.value.toFixed(2), change: nifty.change, percent: nifty.percent.toFixed(2), isUp: nifty.change >= 0, q: 'NIFTY' },
-    { name: 'BSE SENSEX', value: sensex.value.toFixed(2), change: sensex.change, percent: sensex.percent.toFixed(2), isUp: sensex.change >= 0, q: 'SENSEX' },
-    { name: 'BANK NIFTY', value: '51200.40', change: 210.50, percent: '0.41', isUp: true, q: 'BANKNIFTY' },
-    { name: 'RELIANCE', value: rel.value, change: rel.change, percent: rel.percent, isUp: rel.isUp, q: 'RELIANCE' },
-    { name: 'TCS', value: tcs.value, change: tcs.change, percent: tcs.percent, isUp: tcs.isUp, q: 'TCS' },
-    { name: 'HDFCBANK', value: hdfc.value, change: hdfc.change, percent: hdfc.percent, isUp: hdfc.isUp, q: 'HDFCBANK' },
-    { name: 'INFY', value: infy.value, change: infy.change, percent: infy.percent, isUp: infy.isUp, q: 'INFY' },
-    { name: 'ITC', value: itc.value, change: itc.change, percent: itc.percent, isUp: itc.isUp, q: 'ITC' },
+  // Fallback data if API is slow or fails
+  const fallbackItems = [
+    { name: 'RELIANCE', value: '2985.40', change: 92.30, percent: '3.20', isUp: true, q: 'RELIANCE' },
+    { name: 'TCS', value: '4105.10', change: 112.50, percent: '2.80', isUp: true, q: 'TCS' },
+    { name: 'HDFCBANK', value: '1650.00', change: 24.50, percent: '1.50', isUp: true, q: 'HDFCBANK' },
+    { name: 'INFY', value: '1480.90', change: 17.55, percent: '1.20', isUp: true, q: 'INFY' },
+    { name: 'ITC', value: '425.60', change: -7.80, percent: '-1.80', isUp: false, q: 'ITC' },
   ];
+
+  const hasLiveData = Object.keys(liveData).length > 0;
+  
+  const tickerItems = hasLiveData 
+    ? Object.values(liveData).map(item => ({
+        name: item.symbol,
+        value: item.price.toFixed(2),
+        change: item.change,
+        percent: item.percent.toFixed(2),
+        isUp: item.isUp,
+        q: item.symbol
+      }))
+    : fallbackItems;
 
   return (
     <div style={{
@@ -100,14 +74,26 @@ export default function MarketTicker() {
         padding: '0 12px',
         fontSize: '0.75rem',
         fontWeight: 800,
-        color: 'var(--text-muted)',
+        color: isLive ? 'var(--accent)' : 'var(--text-muted)',
         zIndex: 210,
         height: '100%',
         display: 'inline-flex',
         alignItems: 'center',
-        marginRight: '12px'
+        marginRight: '12px',
+        gap: '6px'
       }}>
-        SIMULATED
+        {isLive && (
+          <span style={{
+            display: 'inline-block',
+            width: '6px',
+            height: '6px',
+            borderRadius: '50%',
+            background: 'var(--accent)',
+            boxShadow: '0 0 8px var(--accent)',
+            animation: 'pulse 2s infinite'
+          }}></span>
+        )}
+        {isLive ? 'LIVE' : 'DELAYED'}
       </span>
       <div style={{
         display: 'flex',
@@ -135,7 +121,7 @@ export default function MarketTicker() {
             <span style={{ fontWeight: 700, color: 'var(--foreground)' }}>{item.name}</span>
             <span>{item.value}</span>
             <span style={{ color: item.isUp ? 'var(--accent)' : '#ef4444', fontWeight: 600 }}>
-              {item.isUp ? '▲' : '▼'} {item.percent}%
+              {item.isUp ? '▲' : '▼'} {Math.abs(parseFloat(item.percent))}%
             </span>
           </Link>
         ))}
@@ -144,6 +130,11 @@ export default function MarketTicker() {
         @keyframes ticker {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
+        }
+        @keyframes pulse {
+          0% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.5; transform: scale(1.5); }
+          100% { opacity: 1; transform: scale(1); }
         }
       `}</style>
     </div>
