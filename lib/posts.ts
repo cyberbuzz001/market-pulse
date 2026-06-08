@@ -30,9 +30,17 @@ export function getSortedPostsData(): PostData[] {
 
     const matterResult = matter(fileContents);
 
+    const categoryRaw = matterResult.data.category || 'Uncategorized';
+    const category = categoryRaw
+      .toLowerCase()
+      .split(/[\s/-]+/)
+      .map((w: string) => w.charAt(0).toUpperCase() + w.slice(1))
+      .join(' ');
+
     return {
       slug,
-      ...(matterResult.data as { title: string; date: string; category: string; excerpt: string; coverImage: string }),
+      ...(matterResult.data as { title: string; date: string; excerpt: string; coverImage: string }),
+      category,
     };
   });
 
@@ -56,9 +64,17 @@ export async function getPostData(slug: string): Promise<PostData> {
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
 
+  const categoryRaw = matterResult.data.category || 'Uncategorized';
+  const category = categoryRaw
+    .toLowerCase()
+    .split(/[\s/-]+/)
+    .map((w: string) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ');
+
   return {
     slug,
     contentHtml,
-    ...(matterResult.data as { title: string; date: string; category: string; excerpt: string; coverImage: string }),
+    ...(matterResult.data as { title: string; date: string; excerpt: string; coverImage: string }),
+    category,
   };
 }

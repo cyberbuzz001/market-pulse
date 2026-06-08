@@ -69,10 +69,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         {categoryPosts.length === 0 ? (
           <p style={{ textAlign: 'center', color: '#94a3b8' }}>No posts available in this category yet. Check back soon!</p>
         ) : (
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: '32px', marginBottom: '80px' }}>
+          <div className="category-layout" style={{ display: 'flex', flexWrap: 'wrap', gap: '32px', marginBottom: '80px' }}>
             
             {/* Main Content Column */}
-            <div>
+            <div style={{ flex: '1 1 600px', minWidth: 0 }}>
               {/* Featured Post (Latest) */}
               {featuredPost && (
                 <Link href={`/blog/${featuredPost.slug}`} className="card glass" style={{ marginBottom: '32px' }}>
@@ -102,7 +102,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
             </div>
 
             {/* Sidebar Column */}
-            <aside>
+            <aside style={{ flex: '0 0 300px', width: '100%' }}>
               <CategoryWidget categorySlug={categorySlug} />
               
               <div className="glass" style={{ padding: '24px' }}>
