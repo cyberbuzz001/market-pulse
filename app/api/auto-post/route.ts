@@ -23,12 +23,13 @@ async function handleAutoPost(req: Request) {
     }
 
     // 1. Fetch live market data (Angel One Fallback)
-    let marketDataContext = "Unable to fetch live Angel One market data at this moment. Rely entirely on Google Search.";
+    let marketDataContext = "Unable to fetch live Angel One market data at this moment. Rely entirely on your vast knowledge of the Indian stock market, global macro-economic trends, and weekend cues to provide a broader market analysis or wrap-up.";
     try {
       const tokens = ['3045', '2885', '1333', '11536']; 
       const liveData = await getLiveStockQuotes(tokens);
-      if (liveData) {
-        marketDataContext = "Live Stock Quotes Context:\\n" + JSON.stringify(liveData, null, 2);
+      // Check if liveData exists and is not an empty array/object
+      if (liveData && Object.keys(liveData).length > 0) {
+        marketDataContext = "Live Stock Quotes Context:\n" + JSON.stringify(liveData, null, 2);
       }
     } catch (e) {
       console.warn("Could not fetch Angel One data:", e);
@@ -58,6 +59,7 @@ CRITICAL WRITING GUIDELINES:
 - DO NOT use AI jargon like "In conclusion", "It is important to note", "Delve into", "Navigating the landscape", or "A testament to".
 - Use strong, declarative sentences. Be authoritative and analytical.
 - Break down complex news into readable paragraphs and bullet points.
+- If no live market data is provided, focus on weekly wrap-ups, macro trends, or upcoming events. Do not say you cannot access data.
 
 Format the response EXACTLY as a markdown file with frontmatter.
 
@@ -92,9 +94,11 @@ excerpt: "A punchy, one-sentence summary of the main market driver."
 
     markdownContent = markdownContent.replace(/^```markdown/g, '').replace(/```$/g, '').trim();
 
-    const titleMatch = markdownContent.match(/title:\s*"([^"]+)"/);
+    // Make the title parsing more robust (allow unquoted titles)
+    const titleMatch = markdownContent.match(/title:\s*"?([^"\n]+)"?/);
     if (!titleMatch) {
-      return NextResponse.json({ error: 'Failed to parse title' }, { status: 500 });
+      console.error("Failed to parse title from content:", markdownContent);
+      return NextResponse.json({ error: 'Failed to parse title', content: markdownContent }, { status: 500 });
     }
     
     const slug = titleMatch[1].toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
