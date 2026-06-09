@@ -217,6 +217,14 @@ CRITICAL WRITING RULES:
         console.error('GitHub push failed:', errorText);
         // Local fallback
         fs.writeFileSync(path.join(process.cwd(), 'content/posts', filename), markdownContent, 'utf8');
+      } else {
+        // Force Vercel to rebuild and deploy the site with the new post
+        try {
+          await fetch('https://api.vercel.com/v1/integrations/deploy/prj_W3X2JfIYDvZOe5SNZPl0gPJslZv9/s99V4MznHB', { method: 'POST' });
+          console.log('Successfully triggered Vercel deploy hook.');
+        } catch (deployErr) {
+          console.error('Error triggering deploy hook:', deployErr);
+        }
       }
     } else {
       // Local fallback
