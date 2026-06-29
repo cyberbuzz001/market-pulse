@@ -3,6 +3,107 @@ import fs from 'fs';
 import path from 'path';
 import { getLiveStockQuotes } from '@/lib/angelone';
 
+function extractInitialTitleAndSlug(content: string) {
+  const cleaned = content
+    .replace(/^```(?:markdown|md)?\s*/gi, '')
+    .replace(/```\s*$/g, '')
+    .trim();
+
+  const titleMatch = cleaned.match(/title:\s*"?([^"\n]+)"?/i);
+  const title = titleMatch ? titleMatch[1].trim().replace(/^"+|"+$/g, '').replace(/^'+|'+$/g, '') : 'Market Update';
+  const slug = title.toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)+/g, '');
+  return { title, slug };
+}
+
+function cleanAndNormalizePost(
+  rawContent: string,
+  dateStr: string,
+  category: string,
+  coverImageUrl: string
+) {
+  const content = rawContent
+    .replace(/^```(?:markdown|md)?\s*/gi, '')
+    .replace(/```\s*$/g, '')
+    .trim();
+
+  const lines = content.split(/\r?\n/);
+  let inFrontmatter = false;
+  let frontmatterLines: string[] = [];
+  let bodyLines: string[] = [];
+  let lineIndex = 0;
+
+  if (lines[0]?.trim() === '---') {
+    inFrontmatter = true;
+    lineIndex = 1;
+  }
+
+  for (; lineIndex < lines.length; lineIndex++) {
+    const line = lines[lineIndex];
+    if (inFrontmatter) {
+      if (line.trim() === '---') {
+        inFrontmatter = false;
+        continue;
+      }
+      if (line.trim().startsWith('#')) {
+        inFrontmatter = false;
+        bodyLines.push(line);
+        continue;
+      }
+      frontmatterLines.push(line);
+    } else {
+      bodyLines.push(line);
+    }
+  }
+
+  const fmData: Record<string, string> = {};
+  for (const line of frontmatterLines) {
+    const colonIndex = line.indexOf(':');
+    if (colonIndex > 0) {
+      const key = line.slice(0, colonIndex).trim().toLowerCase();
+      const value = line.slice(colonIndex + 1).trim().replace(/^['"]|['"]$/g, '');
+      fmData[key] = value;
+    }
+  }
+
+  let title = fmData.title || '';
+  if (!title) {
+    const titleMatch = content.match(/title:\s*"?([^"\n]+)"?/i);
+    title = titleMatch ? titleMatch[1].trim() : 'Market Update';
+  }
+  
+  const cleanTitle = title.replace(/^"+|"+$/g, '').replace(/^'+|'+$/g, '');
+  const slug = cleanTitle.toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)+/g, '');
+
+  const date = fmData.date || dateStr;
+  const cat = fmData.category || category;
+  
+  let excerpt = fmData.excerpt || '';
+  if (!excerpt) {
+    const excerptMatch = content.match(/excerpt:\s*"?([^"\n]+)"?/i);
+    excerpt = excerptMatch ? excerptMatch[1].trim() : 'Latest updates from Indian stock markets.';
+  }
+  const cleanExcerpt = excerpt.replace(/^"+|"+$/g, '').replace(/^'+|'+$/g, '');
+
+  const normalizedFrontmatter = [
+    '---',
+    `title: ${JSON.stringify(cleanTitle)}`,
+    `date: "${date}"`,
+    `category: "${cat}"`,
+    `coverImage: "${coverImageUrl}"`,
+    `excerpt: ${JSON.stringify(cleanExcerpt)}`,
+    '---'
+  ].join('\n');
+
+  const cleanBody = bodyLines.join('\n').trim();
+  const normalizedContent = `${normalizedFrontmatter}\n\n${cleanBody}`;
+
+  return { filename: `${slug}.md`, slug, normalizedContent, title: cleanTitle, excerpt: cleanExcerpt };
+}
+
 async function handleAutoPost(req: Request) {
   try {
     // Basic security check: support both GEMINI_API_KEY (manual) and CRON_SECRET (vercel cron)
@@ -110,20 +211,8 @@ CRITICAL WRITING RULES:
       return NextResponse.json({ error: 'Failed to generate text content', details: textData }, { status: 500 });
     }
 
-    // Clean up markdown fencing that the AI sometimes wraps
-    markdownContent = markdownContent
-      .replace(/^```(?:markdown|md)?\s*/gi, '')
-      .replace(/```\s*$/g, '')
-      .trim();
-
-    // Make the title parsing robust (allow unquoted titles)
-    const titleMatch = markdownContent.match(/title:\s*"?([^"\n]+)"?/);
-    if (!titleMatch) {
-      console.error("Failed to parse title from content:", markdownContent.substring(0, 500));
-      return NextResponse.json({ error: 'Failed to parse title', content: markdownContent.substring(0, 500) }, { status: 500 });
-    }
-    
-    const slug = titleMatch[1].trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+    // Robust parsing for initial title and slug
+    const { title, slug } = extractInitialTitleAndSlug(markdownContent);
     const filename = `${slug}.md`;
 
     // 3. Duplicate post prevention — check if slug already exists on GitHub
@@ -153,7 +242,7 @@ CRITICAL WRITING RULES:
             'Content-Type': 'application/json' 
           },
           body: JSON.stringify({
-            prompt: `A highly professional, photorealistic, cinematic image representing the stock market news headline: "${titleMatch[1]}". ${edition}. Dark mode aesthetic with glowing green and red ticker elements, incredibly detailed, 8k resolution, corporate style.`
+            prompt: `A highly professional, photorealistic, cinematic image representing the stock market news headline: "${title}". ${edition}. Dark mode aesthetic with glowing green and red ticker elements, incredibly detailed, 8k resolution, corporate style.`
           })
         });
 
@@ -175,8 +264,13 @@ CRITICAL WRITING RULES:
       console.warn("Error calling Cloudflare API for image:", imgErr);
     }
 
-    // Replace whatever is in coverImage: "..." with the actual coverImageUrl using regex
-    markdownContent = markdownContent.replace(/^coverImage:\s*.*$/m, `coverImage: "${coverImageUrl}"`);
+    // Clean, normalize and rebuild the post markdown with correct frontmatter
+    const normalizedResult = cleanAndNormalizePost(markdownContent, dateStr, category, coverImageUrl);
+    const finalFilename = normalizedResult.filename;
+    const finalSlug = normalizedResult.slug;
+    const finalContent = normalizedResult.normalizedContent;
+    const finalTitle = normalizedResult.title;
+    const finalExcerpt = normalizedResult.excerpt;
 
     // 5. Save to GitHub (Image first, then Markdown)
     if (GITHUB_TOKEN) {
@@ -199,15 +293,15 @@ CRITICAL WRITING RULES:
       }
 
       // Upload Markdown
-      const contentEncoded = Buffer.from(markdownContent, 'utf8').toString('base64');
-      const ghResponse = await fetch(`https://api.github.com/repos/cyberbuzz001/market-pulse/contents/content/posts/${filename}`, {
+      const contentEncoded = Buffer.from(finalContent, 'utf8').toString('base64');
+      const ghResponse = await fetch(`https://api.github.com/repos/cyberbuzz001/market-pulse/contents/content/posts/${finalFilename}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${GITHUB_TOKEN}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          message: `Auto-post: ${titleMatch[1]}`,
+          message: `Auto-post: ${finalTitle}`,
           content: contentEncoded,
         })
       });
@@ -216,7 +310,7 @@ CRITICAL WRITING RULES:
         const errorText = await ghResponse.text();
         console.error('GitHub push failed:', errorText);
         // Local fallback
-        fs.writeFileSync(path.join(process.cwd(), 'content/posts', filename), markdownContent, 'utf8');
+        fs.writeFileSync(path.join(process.cwd(), 'content/posts', finalFilename), finalContent, 'utf8');
       } else {
         // Force Vercel to rebuild and deploy the site with the new post
         try {
@@ -228,12 +322,69 @@ CRITICAL WRITING RULES:
       }
     } else {
       // Local fallback
-      fs.writeFileSync(path.join(process.cwd(), 'content/posts', filename), markdownContent, 'utf8');
+      fs.writeFileSync(path.join(process.cwd(), 'content/posts', finalFilename), finalContent, 'utf8');
       if (imageBase64 && imageFilename) {
         const publicDir = path.join(process.cwd(), 'public/images');
         if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
         fs.writeFileSync(path.join(publicDir, imageFilename), Buffer.from(imageBase64, 'base64'));
       }
+    }
+
+    // 6. Automated Telegram Broadcasting (Optional)
+    const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+    const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+    if (TELEGRAM_BOT_TOKEN && TELEGRAM_CHAT_ID) {
+      try {
+        const postUrl = `https://blog.shreesvarn.in/blog/${finalSlug}`;
+        const messageText = `📊 *${finalTitle}*\n\n_${finalExcerpt}_\n\n🔗 [Read full article](${postUrl})`;
+        
+        let telegramUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+        let bodyData: any = {
+          chat_id: TELEGRAM_CHAT_ID,
+          text: messageText,
+          parse_mode: 'Markdown',
+          disable_web_page_preview: false
+        };
+
+        // If coverImageUrl is an absolute URL, send it as a photo
+        if (coverImageUrl && coverImageUrl.startsWith('http')) {
+          telegramUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendPhoto`;
+          bodyData = {
+            chat_id: TELEGRAM_CHAT_ID,
+            photo: coverImageUrl,
+            caption: messageText,
+            parse_mode: 'Markdown'
+          };
+        }
+
+        const tgRes = await fetch(telegramUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(bodyData)
+        });
+        
+        if (tgRes.ok) {
+          console.log('Successfully broadcasted post to Telegram!');
+        } else {
+          console.warn('Telegram broadcast failed:', await tgRes.text());
+        }
+      } catch (tgErr) {
+        console.error('Error broadcasting to Telegram:', tgErr);
+      }
+    }
+
+    // 7. Automated Email Subscribers Notification (Optional Vercel Postgres query)
+    try {
+      const { sql: dbSql } = require('@vercel/postgres');
+      const subscribers = await dbSql`
+        SELECT contact FROM subscribers WHERE type = 'email'
+      `;
+      if (subscribers && subscribers.rows && subscribers.rows.length > 0) {
+        const emailList = subscribers.rows.map((r: any) => r.contact);
+        console.log(`[AUTOMATION] Notifying ${emailList.length} email subscribers:`, emailList);
+      }
+    } catch (dbErr) {
+      console.warn('Could not query subscribers for email notification:', dbErr);
     }
 
     return NextResponse.json({ success: true, message: 'Article generated and saved', slug });

@@ -1,0 +1,131 @@
+import { NextResponse } from 'next/server';
+import { getLiveStockQuotes } from '../../../lib/angelone';
+
+const TOKEN_MAPPING: Record<string, string> = {
+  RELIANCE: '2885',
+  TCS: '11536',
+  HDFCBANK: '1333',
+  INFY: '1594',
+  ITC: '1660',
+  ICICIBANK: '10893',
+  TATAMOTORS: '3456'
+};
+
+export async function POST(request: Request) {
+  try {
+    const { messages } = await request.json();
+
+    if (!messages || !Array.isArray(messages)) {
+      return NextResponse.json({ error: 'Messages are required' }, { status: 400 });
+    }
+
+    const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+    if (!GEMINI_API_KEY) {
+      return NextResponse.json({ error: 'Gemini API key is not configured' }, { status: 500 });
+    }
+
+    // 1. Scan user messages for stock ticker mentions
+    const mentionedSymbols = new Set<string>();
+    messages.forEach((msg: any) => {
+      if (msg.role === 'user' && typeof msg.content === 'string') {
+        Object.keys(TOKEN_MAPPING).forEach(symbol => {
+          const regex = new RegExp(`\\b${symbol}\\b`, 'i');
+          if (regex.test(msg.content)) {
+            mentionedSymbols.add(symbol);
+          }
+        });
+      }
+    });
+
+    // 2. Fetch live data for mentioned stocks
+    let liveQuotesContext = '';
+    if (mentionedSymbols.size > 0) {
+      const symbolsToFetch = Array.from(mentionedSymbols);
+      const tokens = symbolsToFetch.map(s => TOKEN_MAPPING[s]);
+      const quotes = await getLiveStockQuotes(tokens);
+
+      if (quotes && Array.isArray(quotes)) {
+        liveQuotesContext = 'LIVE MARKET DATA (Retrieved from Angel One SmartAPI):\n';
+        quotes.forEach((quote: any) => {
+          const token = quote.token;
+          const symbol = Object.keys(TOKEN_MAPPING).find(key => TOKEN_MAPPING[key] === token);
+          if (symbol) {
+            const ltp = parseFloat(quote.ltp);
+            const close = parseFloat(quote.close);
+            const change = ltp - close;
+            const percent = close !== 0 ? (change / close) * 100 : 0;
+            liveQuotesContext += `- ${symbol}: Current Price ₹${ltp.toFixed(2)}, Change ${change >= 0 ? '+' : ''}${change.toFixed(2)} (${percent.toFixed(2)}%), Day High ₹${quote.high || 'N/A'}, Day Low ₹${quote.low || 'N/A'}, Volume ${quote.volume || '0'}\n`;
+          }
+        });
+      }
+    }
+
+    // 3. Construct System Prompt & Gemini request contents
+    const systemPrompt = `You are "MarketPulse Terminal AI Advisor", a highly experienced Dalal Street analyst and portfolio intelligence assistant.
+Your style is professional, analytical, authoritative, and direct. Avoid generic disclaimers except for the standard SEBI disclaimer at the very end of your response.
+Do NOT use AI buzzwords (e.g. "delve", "testament", "tapestry"). Provide clear support/resistance levels, trend analysis, and strategic insights.
+
+${liveQuotesContext ? `${liveQuotesContext}\nUse the live numbers above as the absolute current market state. Discuss them with precision.\n` : 'No live stock quote was requested in the immediate query. Offer high-level Indian market insights.'}
+
+Answer the user's questions based on the latest Indian market context (BSE, NSE, Nifty, Sensex, SEBI policies).`;
+
+    // Map chat history into Gemini API format
+    const geminiMessages = [];
+    
+    // Add the system prompt at the beginning of the context
+    geminiMessages.push({
+      role: 'user',
+      parts: [{ text: systemPrompt }]
+    });
+    
+    geminiMessages.push({
+      role: 'model',
+      parts: [{ text: "Acknowledged. I am initialized as MarketPulse Terminal AI Advisor. I will analyze stocks with Dalal Street veteran precision. What ticker or market event should we look at?" }]
+    });
+
+    // Map client-side messages (skip system or handle roles)
+    messages.forEach((msg: any) => {
+      const role = msg.role === 'assistant' ? 'model' : 'user';
+      geminiMessages.push({
+        role,
+        parts: [{ text: msg.content }]
+      });
+    });
+
+    // 4. Send request to Gemini API
+    const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`;
+    
+    const response = await fetch(geminiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        contents: geminiMessages,
+        generationConfig: {
+          temperature: 0.7,
+          maxOutputTokens: 1000
+        }
+      })
+    });
+
+    if (!response.ok) {
+      const errText = await response.text();
+      console.error('Gemini API call failed:', errText);
+      return NextResponse.json({ error: 'Failed to communicate with AI model' }, { status: 502 });
+    }
+
+    const data = await response.json();
+    const aiText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+
+    if (!aiText) {
+      console.error('Gemini empty response:', JSON.stringify(data));
+      return NextResponse.json({ error: 'Empty response generated by AI model' }, { status: 500 });
+    }
+
+    return NextResponse.json({ success: true, response: aiText });
+  } catch (error: any) {
+    console.error('Chat API Error:', error);
+    return NextResponse.json({ error: error.message || 'Internal Server Error' }, { status: 500 });
+  }
+}

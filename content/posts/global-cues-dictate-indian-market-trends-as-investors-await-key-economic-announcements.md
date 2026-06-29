@@ -4,6 +4,7 @@ date: "2026-06-08"
 category: "Global Markets"
 coverImage: "/images/post-img-1780920522724.png"
 excerpt: "The Indian stock market is poised for a significant shift in trend as global macro-economic developments and upcoming catalysts take center stage, with investors closely watching the movements of key indices such as the Nifty 50 and Sensex."
+---
 
 ## Market Overview
 The Indian stock market has been witnessing a rollercoaster ride over the past few weeks, with global cues playing a significant role in dictating the trend. The Nifty 50, which has been the benchmark index for the National Stock Exchange (NSE), has been consolidating within a narrow range, awaiting a breakout. Today, the market mood was cautious, with investors adopting a wait-and-watch approach ahead of key economic announcements. The Sensex, which is the benchmark index for the Bombay Stock Exchange (BSE), also mirrored the trend, with stocks from the banking and IT sectors leading the pack. The market participants are closely watching the movements of foreign institutional investors (FIIs) and domestic institutional investors (DIIs), as their flows have been instrumental in shaping the market trend.

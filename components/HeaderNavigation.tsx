@@ -12,6 +12,7 @@ export default function HeaderNavigation() {
     { label: 'Company Insights', href: '/category/indian-company-insights' },
     { label: 'IPO Tracker', href: '/ipos' },
     { label: 'Mutual Funds', href: '/category/mutual-funds' },
+    { label: 'AI Chat', href: '/chat' },
     { label: 'Screener', href: '/search' }
   ];
 
