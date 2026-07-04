@@ -244,41 +244,65 @@ CRITICAL WRITING RULES:
       }
     }
 
-    // 4. Generate Image using Cloudflare AI
-    let coverImageUrl = "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80";
-    let imageBase64 = null;
-    let imageFilename = null;
+    // 4. Pick a free Unsplash image — diverse pool keyed by category + title hash
+    // Each photo ID is a real, high-quality Unsplash finance/market image (no API key needed)
+    const UNSPLASH_POOL: Record<string, string[]> = {
+      "Pre-Market Brief": [
+        "1590283603385-17d9c6f3f0b4", // pre-market trading screens
+        "1504868584819-f8a8b8b8b8b8", // morning coffee + laptop
+        "1486312338219-ce68d2c6f44d", // person on laptop early
+        "1611974789855-9c2a0a7236a3", // stock ticker screens
+        "1535320903710-a234b4ae2e0a", // sunrise city financial district
+      ],
+      "Market News": [
+        "1611974789855-9c2a0a7236a3", // stock market screen
+        "1590283603385-17d9c6f3f0b4", // trading charts
+        "1559526324-593bc073d938", // financial newspaper
+        "1518186285879-a5eb3d045c74", // bull on wall street
+        "1642790106117-e829e14a795f", // modern fintech
+        "1554260924-0e0b5e741e58", // financial data screen
+        "1581091226825-a6a2a5aee158", // business analytics
+        "1507679799987-c73779587ccf", // professional trader
+        "1551836022-deb4988cc6c0", // financial analysis
+        "1460925895917-afdab827c52f", // laptop with graphs
+      ],
+      "Technical Analysis": [
+        "1611974789855-9c2a0a7236a3", // chart patterns
+        "1590283603385-17d9c6f3f0b4", // technical charts
+        "1569025743873-ea3a9ade89f9", // trading setup multiple screens
+        "1607863680198-23d4b2565df0", // charts and graphs
+        "1518186285879-a5eb3d045c74", // financial charts
+        "1642790106117-e829e14a795f", // data visualization
+        "1551836022-deb4988cc6c0", // technical analysis
+        "1529119368496-2dfae1f29c64", // stock chart close up
+      ],
+      "Global Markets": [
+        "1526628953301-3ad378218498", // global finance building
+        "1554260924-0e0b5e741e58", // world financial center
+        "1486312338219-ce68d2c6f44d", // global trading
+        "1535320903710-a234b4ae2e0a", // city skyline financial
+        "1559526324-593bc073d938", // international business
+        "1492666673288-3c4b4576920b", // earth globe business
+        "1519389950473-47ba0277781c", // teamwork global
+        "1507679799987-c73779587ccf", // international finance
+        "1460925895917-afdab827c52f", // global markets
+      ],
+    };
 
-    try {
-      if (CF_ACCOUNT_ID && CF_API_TOKEN) {
-        const cfResponse = await fetch(`https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/ai/run/@cf/black-forest-labs/flux-1-schnell`, {
-          method: 'POST',
-          headers: { 
-            'Authorization': `Bearer ${CF_API_TOKEN}`,
-            'Content-Type': 'application/json' 
-          },
-          body: JSON.stringify({
-            prompt: `A highly professional, photorealistic, cinematic image representing the stock market news headline: "${title}". ${edition}. Dark mode aesthetic with glowing green and red ticker elements, incredibly detailed, 8k resolution, corporate style.`
-          })
-        });
-
-        if (cfResponse.ok) {
-          const data = await cfResponse.json();
-          if (data.result && data.result.image) {
-            imageBase64 = data.result.image;
-            imageFilename = `post-img-${Date.now()}.png`;
-            coverImageUrl = `/images/${imageFilename}`;
-            console.log("Successfully generated AI image via Cloudflare.");
-          } else {
-            console.warn("Cloudflare AI image generation succeeded but no image was returned.");
-          }
-        } else {
-          console.warn("Cloudflare AI generation failed:", await cfResponse.text());
-        }
+    // Simple deterministic hash of title → consistent image per post
+    function titleHash(str: string): number {
+      let h = 0;
+      for (let i = 0; i < str.length; i++) {
+        h = (Math.imul(31, h) + str.charCodeAt(i)) | 0;
       }
-    } catch (imgErr) {
-      console.warn("Error calling Cloudflare API for image:", imgErr);
+      return Math.abs(h);
     }
+
+    const pool = UNSPLASH_POOL[category] || UNSPLASH_POOL["Market News"];
+    const photoId = pool[titleHash(title) % pool.length];
+    const coverImageUrl = `https://images.unsplash.com/photo-${photoId}?auto=format&fit=crop&w=800&q=80`;
+
+    console.log(`Selected Unsplash image: photo-${photoId} for category "${category}"`);
 
     // Clean, normalize and rebuild the post markdown with correct frontmatter
     const normalizedResult = cleanAndNormalizePost(markdownContent, dateStr, category, coverImageUrl);
@@ -288,26 +312,8 @@ CRITICAL WRITING RULES:
     const finalTitle = normalizedResult.title;
     const finalExcerpt = normalizedResult.excerpt;
 
-    // 5. Save to GitHub (Image first, then Markdown)
+    // 5. Save to GitHub — Markdown only (images are hosted on Unsplash, no upload needed)
     if (GITHUB_TOKEN) {
-      // Upload Image if generated
-      if (imageBase64 && imageFilename) {
-        const imgResponse = await fetch(`https://api.github.com/repos/cyberbuzz001/market-pulse/contents/public/images/${imageFilename}`, {
-          method: 'PUT',
-          headers: {
-            'Authorization': `Bearer ${GITHUB_TOKEN}`,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            message: `Auto-post image: ${imageFilename}`,
-            content: imageBase64,
-          })
-        });
-        if (!imgResponse.ok) {
-          console.warn('GitHub image upload failed:', await imgResponse.text());
-        }
-      }
-
       // Upload Markdown
       const contentEncoded = Buffer.from(finalContent, 'utf8').toString('base64');
       const ghResponse = await fetch(`https://api.github.com/repos/cyberbuzz001/market-pulse/contents/content/posts/${finalFilename}`, {
@@ -339,11 +345,6 @@ CRITICAL WRITING RULES:
     } else {
       // Local fallback
       fs.writeFileSync(path.join(process.cwd(), 'content/posts', finalFilename), finalContent, 'utf8');
-      if (imageBase64 && imageFilename) {
-        const publicDir = path.join(process.cwd(), 'public/images');
-        if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
-        fs.writeFileSync(path.join(publicDir, imageFilename), Buffer.from(imageBase64, 'base64'));
-      }
     }
 
     // 6. Automated Telegram Broadcasting (Optional)
