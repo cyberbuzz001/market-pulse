@@ -23,26 +23,33 @@ export function getSortedPostsData(): PostData[] {
   }
 
   const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
-    const slug = fileName.replace(/\.md$/, '');
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
+  const allPostsData = fileNames
+    .map((fileName) => {
+      const slug = fileName.replace(/\.md$/, '');
+      const fullPath = path.join(postsDirectory, fileName);
+      const fileContents = fs.readFileSync(fullPath, 'utf8');
 
-    const matterResult = matter(fileContents);
+      try {
+        const matterResult = matter(fileContents);
 
-    const categoryRaw = matterResult.data.category || 'Uncategorized';
-    const category = categoryRaw
-      .toLowerCase()
-      .split(/[\s/-]+/)
-      .map((w: string) => w.charAt(0).toUpperCase() + w.slice(1))
-      .join(' ');
+        const categoryRaw = matterResult.data.category || 'Uncategorized';
+        const category = categoryRaw
+          .toLowerCase()
+          .split(/[\s/-]+/)
+          .map((w: string) => w.charAt(0).toUpperCase() + w.slice(1))
+          .join(' ');
 
-    return {
-      slug,
-      ...(matterResult.data as { title: string; date: string; excerpt: string; coverImage: string }),
-      category,
-    };
-  });
+        return {
+          slug,
+          ...(matterResult.data as { title: string; date: string; excerpt: string; coverImage: string }),
+          category,
+        };
+      } catch (err) {
+        console.warn(`[posts] Skipping malformed post "${fileName}": ${err}`);
+        return null;
+      }
+    })
+    .filter((post): post is PostData => post !== null);
 
   return allPostsData.sort((a, b) => {
     if (a.date < b.date) {
@@ -57,7 +64,12 @@ export async function getPostData(slug: string): Promise<PostData> {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
-  const matterResult = matter(fileContents);
+  let matterResult: ReturnType<typeof matter>;
+  try {
+    matterResult = matter(fileContents);
+  } catch (err) {
+    throw new Error(`Malformed frontmatter in post "${slug}": ${err}`);
+  }
 
   const processedContent = await remark()
     .use(html, { sanitize: true })

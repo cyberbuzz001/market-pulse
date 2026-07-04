@@ -4,6 +4,7 @@ date: "2026-06-14"
 category: "Global Markets"
 coverImage: "/images/post-img-1781439388206.png"
 excerpt: "Indian stock market witnesses a volatile session as Nifty 50 hovers around the crucial 18,500 mark, driven by mixed global cues and FII selling."
+---
 
 ## Market Overview
 The Indian stock market witnessed a rollercoaster ride today, with the Nifty 50 index oscillating between gains and losses throughout the session. The benchmark index ultimately ended the day with a marginal loss, weighed down by selling pressure in index heavyweights such as Reliance Industries (RELIANCE) and HDFC Bank (HDFCBANK). The Sensex, on the other hand, managed to eke out a small gain, driven by buying interest in stocks like ICICI Bank (ICICIBANK) and Larsen & Toubro (LT). The market mood remains cautious, with investors closely watching global developments and their potential implications on the domestic economy.

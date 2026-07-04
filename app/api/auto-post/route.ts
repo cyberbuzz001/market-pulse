@@ -30,6 +30,7 @@ function cleanAndNormalizePost(
 
   const lines = content.split(/\r?\n/);
   let inFrontmatter = false;
+  let frontmatterDone = false;
   let frontmatterLines: string[] = [];
   let bodyLines: string[] = [];
   let lineIndex = 0;
@@ -41,21 +42,36 @@ function cleanAndNormalizePost(
 
   for (; lineIndex < lines.length; lineIndex++) {
     const line = lines[lineIndex];
-    if (inFrontmatter) {
+    if (inFrontmatter && !frontmatterDone) {
       if (line.trim() === '---') {
+        // Proper closing delimiter
         inFrontmatter = false;
+        frontmatterDone = true;
         continue;
       }
       if (line.trim().startsWith('#')) {
+        // AI omitted closing ---, markdown heading signals end of frontmatter
         inFrontmatter = false;
+        frontmatterDone = true;
         bodyLines.push(line);
         continue;
+      }
+      if (line.trim() === '' && frontmatterLines.length > 0) {
+        // Blank line after some frontmatter fields — likely missing closing ---
+        // Peek ahead: if next non-blank line starts with ##, treat blank as separator
+        const nextNonBlank = lines.slice(lineIndex + 1).find(l => l.trim() !== '');
+        if (nextNonBlank && nextNonBlank.trim().startsWith('#')) {
+          inFrontmatter = false;
+          frontmatterDone = true;
+          continue;
+        }
       }
       frontmatterLines.push(line);
     } else {
       bodyLines.push(line);
     }
   }
+
 
   const fmData: Record<string, string> = {};
   for (const line of frontmatterLines) {
