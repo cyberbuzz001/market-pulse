@@ -1,8 +1,8 @@
----
+﻿---
 title: "Nifty 50 Hovers Around 18,000 Mark as Global Cues and Q4 Earnings Drive Market Sentiment"
 date: "2026-06-12"
 category: "Market News"
-coverImage: "/images/post-img-1781247758405.png"
+coverImage: "https://images.unsplash.com/photo-1554260924-0e0b5e741e58?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Indian stock market is witnessing a volatile session as investors weigh the impact of global macro-economic developments and the ongoing Q4 earnings season on domestic stocks."
 ---
 

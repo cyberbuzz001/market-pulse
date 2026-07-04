@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Equities Steady Amid Global Growth Concerns and Domestic Earnings"
 date: "2026-06-10"
 category: "Market News"
-coverImage: "/images/post-img-1781074957821.png"
+coverImage: "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?auto=format&fit=crop&w=800&q=80"
 excerpt: "Benchmark indices trade range-bound as investors weigh the impact of global economic slowdown on domestic corporate earnings."
 ---
 

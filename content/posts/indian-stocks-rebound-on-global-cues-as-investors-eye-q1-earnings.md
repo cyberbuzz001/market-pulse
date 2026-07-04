@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Stocks Rebound on Global Cues as Investors Eye Q1 Earnings"
 date: "2026-06-25"
 category: "Global Markets"
-coverImage: "/images/post-img-1782389768743.png"
+coverImage: "https://images.unsplash.com/photo-1492666673288-3c4b4576920b?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Nifty 50 index rose sharply today, driven by a rebound in global markets and anticipation of strong Q1 earnings from key sectors."
 ---
 

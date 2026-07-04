@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Equities End Q2 on a Cautious Note Amid Global Growth Concerns"
 date: "2026-06-30"
 category: "Global Markets"
-coverImage: "/images/post-img-1782821769478.png"
+coverImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
 excerpt: "Benchmark indices Nifty 50 and Sensex witnessed a volatile session as investors weighed the impact of a potential global slowdown on domestic earnings."
 ---
 

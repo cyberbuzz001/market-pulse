@@ -1,8 +1,8 @@
----
+﻿---
 title: "Global Cues Dictate Indian Market Trend as Investors Await Key Economic Indicators"
 date: "2026-06-15"
 category: "Global Markets"
-coverImage: "/images/post-img-1781525789476.png"
+coverImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Indian stock market is experiencing a tug-of-war between positive global cues and domestic economic concerns, setting the stage for a volatile trading session ahead."
 ---
 

@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Stocks Grapple with Global Headwinds as Nifty 50 Tests Key Support"
 date: "2026-06-11"
 category: "Global Markets"
-coverImage: "/images/post-img-1781180190106.png"
+coverImage: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Nifty 50 index is under pressure as global macro-economic concerns weigh on investor sentiment, with all eyes on the upcoming monetary policy meeting."
 ---
 

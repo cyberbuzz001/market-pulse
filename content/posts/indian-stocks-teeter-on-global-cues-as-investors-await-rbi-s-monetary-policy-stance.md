@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Stocks Teeter on Global Cues as Investors Await RBI's Monetary Policy Stance"
 date: "2026-06-17"
 category: "Market News"
-coverImage: "/images/post-img-1781679750093.png"
+coverImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Indian stock market is witnessing a cautious trend today, with investors keeping a close eye on global macro-economic developments and awaiting the Reserve Bank of India's monetary policy stance, which is expected to influence the market's near-term trajectory."
 ---
 

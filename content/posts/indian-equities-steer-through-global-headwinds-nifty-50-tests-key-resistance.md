@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Equities Steer Through Global Headwinds, Nifty 50 Tests Key Resistance"
 date: "2026-06-28"
 category: "Global Markets"
-coverImage: "/images/post-img-1782648969527.png"
+coverImage: "https://images.unsplash.com/photo-1590283603385-17d9c6f3f0b4?auto=format&fit=crop&w=800&q=80"
 excerpt: "Global macro-economic uncertainties weigh on Indian stocks as Nifty 50 hovers near crucial resistance levels, setting the stage for a volatile trading session tomorrow."
 ---
 

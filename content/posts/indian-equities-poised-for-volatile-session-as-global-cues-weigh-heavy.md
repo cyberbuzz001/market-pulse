@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Equities Poised for Volatile Session as Global Cues Weigh Heavy"
 date: "2026-06-15"
 category: "Market News"
-coverImage: "/images/post-img-1781506956245.png"
+coverImage: "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?auto=format&fit=crop&w=800&q=80"
 excerpt: "Global macro-economic developments and upcoming catalysts are set to dictate the trajectory of Indian equities, as investors cautiously navigate the choppy waters of the stock market."
 ---
 

@@ -1,8 +1,8 @@
----
+﻿---
 title: "Market Rebound Fades as Reliance Industries Loses Steam"
 date: "2026-06-06"
 category: "Market News"
-coverImage: "/images/post-img-1780724935868.png"
+coverImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Indian market's brief rebound fizzles out as Reliance Industries' shares continue to decline, leading to a mixed bag of performances across key sectors."
 ---
 

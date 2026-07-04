@@ -1,8 +1,8 @@
----
+﻿---
 title: "Nifty 50 Hovers Around 18,000 Mark Amidst Global Growth Concerns"
 date: "2026-06-09"
 category: "Market News"
-coverImage: "/images/post-img-1780988556338.png"
+coverImage: "https://images.unsplash.com/photo-1590283603385-17d9c6f3f0b4?auto=format&fit=crop&w=800&q=80"
 excerpt: "Indian equities trade cautiously as investors weigh the impact of slowing global growth on domestic corporate earnings."
 ---
 

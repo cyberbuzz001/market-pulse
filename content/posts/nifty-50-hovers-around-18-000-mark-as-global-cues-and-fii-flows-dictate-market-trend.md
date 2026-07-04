@@ -1,8 +1,8 @@
----
+﻿---
 title: "Nifty 50 Hovers Around 18,000 Mark as Global Cues and FII Flows Dictate Market Trend"
 date: "2026-06-20"
 category: "Market News"
-coverImage: "/images/post-img-1781938946723.png"
+coverImage: "https://images.unsplash.com/photo-1590283603385-17d9c6f3f0b4?auto=format&fit=crop&w=800&q=80"
 excerpt: "Indian stock market witnesses a volatile session as investors weigh the impact of global macro-economic developments and foreign institutional investor flows on domestic equities."
 ---
 

@@ -1,8 +1,8 @@
----
+﻿---
 title: "Nifty 50 Teeters on 18,000 Mark as Global Cues Weigh Heavily on Indian Equities"
 date: "2026-06-09"
 category: "Market News"
-coverImage: "/images/post-img-1780982683376.png"
+coverImage: "https://images.unsplash.com/photo-1590283603385-17d9c6f3f0b4?auto=format&fit=crop&w=800&q=80"
 excerpt: "Global macroeconomic headwinds and a strengthening US dollar have Indian stocks on edge, with the Nifty 50 struggling to breach the 18,000 level."
 ---
 

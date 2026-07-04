@@ -1,8 +1,8 @@
----
+﻿---
 title: "Market Sentiment Shifts as Tech Giants Tumble"
 date: "2026-06-06"
 category: "Market News"
-coverImage: "/images/post-img-1780725679833.png"
+coverImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
 excerpt: "Indian markets witness a sharp decline as TCS, Reliance, and HDFC Bank post losses, while SBIN shows resilience."
 ---
 

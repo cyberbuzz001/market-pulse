@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Stocks Grapple with Global Headwinds as Investors Await Fresh Catalysts"
 date: "2026-06-26"
 category: "Market News"
-coverImage: "/images/post-img-1782457344007.png"
+coverImage: "https://images.unsplash.com/photo-1518186285879-a5eb3d045c74?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Indian stock market is witnessing a cautious trading session as investors weigh the impact of global macro-economic developments on domestic stocks."
 ---
 

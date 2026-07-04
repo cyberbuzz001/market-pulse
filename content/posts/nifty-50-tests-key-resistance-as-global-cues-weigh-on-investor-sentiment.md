@@ -1,8 +1,8 @@
----
+﻿---
 title: "Nifty 50 Tests Key Resistance as Global Cues Weigh on Investor Sentiment"
 date: "2026-06-16"
 category: "Market News"
-coverImage: "/images/post-img-1781593360193.png"
+coverImage: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Nifty 50 index is struggling to breach its key resistance level of 18,500, as global macro-economic concerns and FII outflows dampen investor sentiment."
 ---
 

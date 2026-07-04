@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Stocks Teeter on Global Cues as Investors Await Earnings Season"
 date: "2026-07-04"
 category: "Market News"
-coverImage: "/images/post-img-1783148549674.png"
+coverImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Nifty 50 hovers near crucial support levels as global macroeconomic headwinds and upcoming earnings reports dictate market sentiment."
 ---
 

@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Stocks Teeter on Global Growth Concerns Amidst Domestic Recovery"
 date: "2026-06-18"
 category: "Market News"
-coverImage: "/images/post-img-1781766147886.png"
+coverImage: "https://images.unsplash.com/photo-1535320903710-a234b4ae2e0a?auto=format&fit=crop&w=800&q=80"
 excerpt: "Global macro-economic headwinds weigh on Indian equities as investors await cues on monetary policy and economic growth."
 ---
 

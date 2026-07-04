@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Equities Witness Cautious Optimism Amidst Global Growth Concerns"
 date: "2026-07-01"
 category: "Global Markets"
-coverImage: "/images/post-img-1782908168288.png"
+coverImage: "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?auto=format&fit=crop&w=800&q=80"
 excerpt: "Nifty 50 hovers around 18,300 levels as investors weigh the impact of global economic slowdown on domestic growth prospects."
 ---
 

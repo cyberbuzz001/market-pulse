@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Stocks Teeter on Global Growth Concerns Amidst Monetary Policy Uncertainty"
 date: "2026-06-23"
 category: "Market News"
-coverImage: "/images/post-img-1782198144332.png"
+coverImage: "https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Nifty 50 hovers near crucial support levels as investors weigh the impact of global economic slowdown on domestic corporate earnings."
 ---
 

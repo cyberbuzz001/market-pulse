@@ -1,8 +1,8 @@
----
+﻿---
 title: "Nifty 50 Tests Key Resistance as Global Cues Turn Cautious"
 date: "2026-06-14"
 category: "Global Markets"
-coverImage: "/images/post-img-1781439388206.png"
+coverImage: "https://images.unsplash.com/photo-1590283603385-17d9c6f3f0b4?auto=format&fit=crop&w=800&q=80"
 excerpt: "Indian stock market witnesses a volatile session as Nifty 50 hovers around the crucial 18,500 mark, driven by mixed global cues and FII selling."
 ---
 

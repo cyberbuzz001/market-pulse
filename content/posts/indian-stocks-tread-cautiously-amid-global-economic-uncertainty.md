@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Stocks Tread Cautiously Amid Global Economic Uncertainty"
 date: "2026-06-19"
 category: "Market News"
-coverImage: "/images/post-img-1781852547872.png"
+coverImage: "https://images.unsplash.com/photo-1526628953301-3ad378218498?auto=format&fit=crop&w=800&q=80"
 excerpt: "Global macro-economic developments and upcoming catalysts are driving Indian stock market trends, with investors adopting a wait-and-watch approach."
 ---
 

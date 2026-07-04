@@ -1,8 +1,8 @@
----
+﻿---
 title: "Nifty 50 Hovers Around 18,000 Mark as Global Cues, Q1 Earnings Take Center Stage"
 date: "2026-07-01"
 category: "Market News"
-coverImage: "/images/post-img-1782889348950.png"
+coverImage: "https://images.unsplash.com/photo-1554260924-0e0b5e741e58?auto=format&fit=crop&w=800&q=80"
 excerpt: "Indian equities tread cautiously as investors weigh the impact of global macro-economic developments and the ongoing Q1 earnings season on the domestic market."
 ---
 

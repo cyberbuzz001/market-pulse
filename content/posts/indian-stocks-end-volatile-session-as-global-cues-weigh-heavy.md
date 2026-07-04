@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Stocks End Volatile Session as Global Cues Weigh Heavy"
 date: "2026-06-27"
 category: "Global Markets"
-coverImage: "/images/post-img-1782562582789.png"
+coverImage: "https://images.unsplash.com/photo-1526628953301-3ad378218498?auto=format&fit=crop&w=800&q=80"
 excerpt: "Global economic uncertainty and mixed cues from international markets led to a seesaw battle on the Indian bourses, as investors remained cautious ahead of key economic data releases."
 ---
 

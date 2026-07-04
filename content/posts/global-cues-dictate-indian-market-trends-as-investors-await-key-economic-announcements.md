@@ -1,8 +1,8 @@
----
+﻿---
 title: "Global Cues Dictate Indian Market Trends as Investors Await Key Economic Announcements"
 date: "2026-06-08"
 category: "Global Markets"
-coverImage: "/images/post-img-1780920522724.png"
+coverImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Indian stock market is poised for a significant shift in trend as global macro-economic developments and upcoming catalysts take center stage, with investors closely watching the movements of key indices such as the Nifty 50 and Sensex."
 ---
 

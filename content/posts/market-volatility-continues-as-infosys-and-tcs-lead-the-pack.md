@@ -1,8 +1,8 @@
----
+﻿---
 title: "Market Volatility Continues as Infosys and TCS Lead the Pack"
 date: "2026-06-06"
 category: "Market News"
-coverImage: "/images/post-img-1780724949395.png"
+coverImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
 excerpt: "Infosys and TCS lead the market charge, while HDFC Bank struggles to stay afloat amidst rising volatility."
 ---
 

@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Equities Await Catalysts as Global Cues Remain Cautious"
 date: "2026-06-19"
 category: "Global Markets"
-coverImage: "/images/post-img-1781871366695.png"
+coverImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Indian stock market is poised for a significant move as it awaits cues from the upcoming monetary policy meeting and global economic developments."
 ---
 

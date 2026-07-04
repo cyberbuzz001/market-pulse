@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Equities Steer Towards Caution as Global Headwinds Intensify"
 date: "2026-06-14"
 category: "Market News"
-coverImage: "/images/post-img-1781420559644.png"
+coverImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
 excerpt: "Global economic uncertainty and impending monetary policy decisions dictate a cautious approach for investors in the Indian stock market today."
 ---
 

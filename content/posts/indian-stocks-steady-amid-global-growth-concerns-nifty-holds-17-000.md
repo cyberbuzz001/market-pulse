@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Stocks Steady Amid Global Growth Concerns, Nifty Holds 17,000"
 date: "2026-06-09"
 category: "Global Markets"
-coverImage: "/images/post-img-1781007382974.png"
+coverImage: "https://images.unsplash.com/photo-1590283603385-17d9c6f3f0b4?auto=format&fit=crop&w=800&q=80"
 excerpt: "Nifty 50 index holds steady above 17,000 level as investors weigh global growth concerns against domestic economic resilience."
 ---
 

@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Stocks Steady Amid Global Growth Concerns, IT and Pharma Sectors Shine"
 date: "2026-06-21"
 category: "Market News"
-coverImage: "/images/post-img-1782025342814.png"
+coverImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Nifty 50 index holds steady near the 18,500 mark, driven by gains in IT and pharma stocks, as global growth concerns weigh on investor sentiment."
 ---
 

@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Stocks Rebound on Global Cues, Nifty 50 Eyes 18,000 Mark"
 date: "2026-06-12"
 category: "Global Markets"
-coverImage: "/images/post-img-1781266610583.png"
+coverImage: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Indian stock market staged a strong recovery today, driven by positive global cues and buying interest in index heavyweights, setting the stage for a potential retest of the 18,000 mark on the Nifty 50."
 ---
 

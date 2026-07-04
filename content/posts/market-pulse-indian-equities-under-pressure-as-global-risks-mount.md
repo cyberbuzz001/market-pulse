@@ -1,8 +1,8 @@
----
+﻿---
 title: "Market Pulse: Indian Equities Under Pressure as Global Risks Mount"
 date: "2026-06-06"
 category: "Market News"
-coverImage: "/images/post-img-1780724978225.png"
+coverImage: "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?auto=format&fit=crop&w=800&q=80"
 excerpt: "Indian equities struggle to find footing as global economic concerns weigh on investor sentiment."
 ---
 

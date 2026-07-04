@@ -1,8 +1,8 @@
----
+﻿---
 title: "Nifty Dips Below 17,000 as Selling Pressure Mounts: A Technical Analysis"
 date: "2026-06-08"
 category: "Technical Analysis"
-coverImage: "/images/post-img-1780914794450.png"
+coverImage: "https://images.unsplash.com/photo-1554260924-0e0b5e741e58?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Indian stock market witnessed a significant correction today, with the Nifty 50 index plunging below the 17,000 mark, as investors booked profits in heavyweight stocks like TCS and Reliance Industries."
 ---
 

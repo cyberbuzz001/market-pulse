@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Stocks Stage Cautious Recovery Amid Global Growth Concerns"
 date: "2026-06-25"
 category: "Market News"
-coverImage: "/images/post-img-1782370949719.png"
+coverImage: "https://images.unsplash.com/photo-1526628953301-3ad378218498?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Nifty 50 index is attempting to regain its footing above the 17,000 mark, driven by a rebound in IT and Pharma stocks, as investors weigh the implications of a potential global economic slowdown on the domestic market."
 ---
 

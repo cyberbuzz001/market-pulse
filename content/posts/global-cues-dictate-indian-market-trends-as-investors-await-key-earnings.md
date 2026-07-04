@@ -1,8 +1,8 @@
----
+﻿---
 title: "Global Cues Dictate Indian Market Trends as Investors Await Key Earnings"
 date: "2026-06-10"
 category: "Global Markets"
-coverImage: "/images/post-img-1781093805459.png"
+coverImage: "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Indian stock market witnessed a volatile session today, with the Nifty 50 index oscillating between gains and losses, as global macro-economic developments and upcoming earnings reports took center stage."
 ---
 

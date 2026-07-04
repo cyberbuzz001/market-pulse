@@ -1,8 +1,8 @@
----
+﻿---
 title: "Market Sentiment Turns Bearish as Tech Giants Struggle"
 date: "2026-06-06"
 category: "Market News"
-coverImage: "/images/post-img-1780724964017.png"
+coverImage: "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?auto=format&fit=crop&w=800&q=80"
 excerpt: "Market sentiment turns bearish as tech giants TCS and Reliance struggle to maintain momentum, while HDFC Bank and SBI Bank show signs of weakness."
 ---
 

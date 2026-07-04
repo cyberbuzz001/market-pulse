@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Stocks Grapple with Global Headwinds as Q1 Earnings Season Kicks Off"
 date: "2026-07-03"
 category: "Market News"
-coverImage: "/images/post-img-1783062147617.png"
+coverImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Nifty 50 struggles to regain its footing as investors weigh the impact of a strengthening US dollar on Indian exports and the impending Q1 earnings season."
 ---
 

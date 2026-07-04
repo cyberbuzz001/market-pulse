@@ -1,8 +1,8 @@
----
+﻿---
 title: "Global Cues Weigh Heavy on Indian Bourses as Investors Await Fed Outcome"
 date: "2026-06-23"
 category: "Global Markets"
-coverImage: "/images/post-img-1782216975242.png"
+coverImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Indian stock market is bracing for a volatile session ahead as global macro-economic developments and upcoming catalysts take center stage."
 ---
 

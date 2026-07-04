@@ -1,8 +1,8 @@
----
+﻿---
 title: "Nifty 50 Hovers Near 18,000 Mark as Global Cues Weigh Heavy on Investor Sentiment"
 date: "2026-06-13"
 category: "Global Markets"
-coverImage: "/images/post-img-1781352987872.png"
+coverImage: "https://images.unsplash.com/photo-1590283603385-17d9c6f3f0b4?auto=format&fit=crop&w=800&q=80"
 excerpt: "Global macro-economic headwinds and a surge in crude oil prices dictate the Indian stock market's trajectory, as Nifty 50 struggles to breach the 18,000 mark."
 ---
 

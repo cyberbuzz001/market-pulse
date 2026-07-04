@@ -1,8 +1,8 @@
----
+﻿---
 title: "Nifty 50 Teeters on Edge as Global Cues and Domestic Inflation Concerns Weigh Heavy"
 date: "2026-07-02"
 category: "Market News"
-coverImage: "/images/post-img-1782975763739.png"
+coverImage: "https://images.unsplash.com/photo-1590283603385-17d9c6f3f0b4?auto=format&fit=crop&w=800&q=80"
 excerpt: "Indian stock markets are witnessing a cautious trading session as investors grapple with the implications of rising global crude prices and domestic inflation concerns on the economy."
 ---
 

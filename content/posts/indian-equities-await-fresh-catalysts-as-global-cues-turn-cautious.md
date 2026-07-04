@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Equities Await Fresh Catalysts as Global Cues Turn Cautious"
 date: "2026-06-18"
 category: "Global Markets"
-coverImage: "/images/post-img-1781784972775.png"
+coverImage: "https://images.unsplash.com/photo-1518186285879-a5eb3d045c74?auto=format&fit=crop&w=800&q=80"
 excerpt: "Caution grips Indian stock markets as investors await fresh catalysts to drive the next leg of the rally, amidst a backdrop of global macro-economic uncertainty."
 ---
 

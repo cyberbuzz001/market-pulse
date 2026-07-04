@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Stocks Teeter on Edge as Global Cues and Monsoon Worries Dominate"
 date: "2026-06-30"
 category: "Market News"
-coverImage: "/images/post-img-1782802946600.png"
+coverImage: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80"
 excerpt: "Global economic uncertainty and concerns over India's monsoon season weigh heavily on investor sentiment, as the Nifty 50 and Sensex struggle to find direction."
 ---
 

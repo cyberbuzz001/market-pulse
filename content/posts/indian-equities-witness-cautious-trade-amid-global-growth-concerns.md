@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Equities Witness Cautious Trade Amid Global Growth Concerns"
 date: "2026-06-21"
 category: "Global Markets"
-coverImage: "/images/post-img-1782044171045.png"
+coverImage: "https://images.unsplash.com/photo-1518186285879-a5eb3d045c74?auto=format&fit=crop&w=800&q=80"
 excerpt: "Global macro-economic developments and upcoming catalysts dictate the Indian stock market's trajectory, as investors remain cautious amidst growth concerns."
 ---
 

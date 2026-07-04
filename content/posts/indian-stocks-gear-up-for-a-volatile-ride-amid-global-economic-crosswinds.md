@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Stocks Gear Up for a Volatile Ride Amid Global Economic Crosswinds"
 date: "2026-07-03"
 category: "Global Markets"
-coverImage: "/images/post-img-1783080969515.png"
+coverImage: "https://images.unsplash.com/photo-1535320903710-a234b4ae2e0a?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Nifty 50 index is poised to witness a crucial test of its support levels as global macro-economic developments and upcoming catalysts threaten to upset the applecart."
 ---
 

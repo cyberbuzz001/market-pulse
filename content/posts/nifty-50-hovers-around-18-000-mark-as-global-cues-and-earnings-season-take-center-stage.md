@@ -1,8 +1,8 @@
----
+﻿---
 title: "Nifty 50 Hovers Around 18,000 Mark as Global Cues and Earnings Season Take Center Stage"
 date: "2026-06-24"
 category: "Market News"
-coverImage: "/images/post-img-1782284550044.png"
+coverImage: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Indian stock market is witnessing a volatile session as investors weigh the impact of global macro-economic developments and the ongoing earnings season on key indices."
 ---
 

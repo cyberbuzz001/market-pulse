@@ -1,8 +1,8 @@
----
+﻿---
 title: "Global Cues Weigh Heavy on Indian Markets as Investors Await Q1 Earnings"
 date: "2026-06-29"
 category: "Global Markets"
-coverImage: "/images/post-img-1782735371219.png"
+coverImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
 excerpt: "Indian stock markets ended the day on a cautious note, as global macro-economic concerns and upcoming Q1 earnings season kept investors on the sidelines."
 ---
 

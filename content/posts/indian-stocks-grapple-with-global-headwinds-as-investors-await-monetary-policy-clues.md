@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Stocks Grapple with Global Headwinds as Investors Await Monetary Policy Clues"
 date: "2026-06-27"
 category: "Market News"
-coverImage: "/images/post-img-1782543743338.png"
+coverImage: "https://images.unsplash.com/photo-1518186285879-a5eb3d045c74?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Nifty 50 hovers near crucial support levels as global economic uncertainty and domestic inflation concerns weigh on investor sentiment."
 ---
 

@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Equities Poised for Rebound as Global Cues Improve"
 date: "2026-06-11"
 category: "Market News"
-coverImage: "/images/post-img-1781161361880.png"
+coverImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
 excerpt: "A rebound in global equities and easing crude oil prices set the tone for a potential upswing in Indian stocks today."
 ---
 

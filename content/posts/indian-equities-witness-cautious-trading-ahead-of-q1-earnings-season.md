@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Equities Witness Cautious Trading Ahead of Q1 Earnings Season"
 date: "2026-07-02"
 category: "Global Markets"
-coverImage: "/images/post-img-1782994566695.png"
+coverImage: "https://images.unsplash.com/photo-1518186285879-a5eb3d045c74?auto=format&fit=crop&w=800&q=80"
 excerpt: "The Nifty 50 index traded in a narrow range, as investors await the start of the Q1 earnings season, with Infosys Ltd. (INFY) and HDFC Bank Ltd. (HDFCBANK) set to announce their results soon."
 ---
 

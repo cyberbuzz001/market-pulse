@@ -1,8 +1,8 @@
----
+﻿---
 title: "Nifty 50 Teeters on Edge as Global Cues Weigh Heavy on Indian Equities"
 date: "2026-06-13"
 category: "Market News"
-coverImage: "/images/post-img-1781334169194.png"
+coverImage: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&fit=crop&w=800&q=80"
 excerpt: "Global macro-economic headwinds and a strengthening US dollar have Indian stocks on high alert, with the Nifty 50 index struggling to find its footing amidst a sea of uncertainty."
 ---
 

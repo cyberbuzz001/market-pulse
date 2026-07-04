@@ -1,8 +1,8 @@
----
+﻿---
 title: "Indian Equities Steady Amid Global Growth Concerns, Nifty 50 Holds 17,000"
 date: "2026-06-24"
 category: "Global Markets"
-coverImage: "/images/post-img-1782303366934.png"
+coverImage: "https://images.unsplash.com/photo-1590283603385-17d9c6f3f0b4?auto=format&fit=crop&w=800&q=80"
 excerpt: "Global macro-economic headwinds weigh on investor sentiment, but domestic consumption and IT sectors show resilience."
 ---
 

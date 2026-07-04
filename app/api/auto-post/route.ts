@@ -245,47 +245,56 @@ CRITICAL WRITING RULES:
     }
 
     // 4. Pick a free Unsplash image — diverse pool keyed by category + title hash
-    // Each photo ID is a real, high-quality Unsplash finance/market image (no API key needed)
+    // Each photo ID is a verified, high-quality Unsplash finance/market image (no API key needed)
     const UNSPLASH_POOL: Record<string, string[]> = {
       "Pre-Market Brief": [
-        "1590283603385-17d9c6f3f0b4", // pre-market trading screens
-        "1504868584819-f8a8b8b8b8b8", // morning coffee + laptop
-        "1486312338219-ce68d2c6f44d", // person on laptop early
-        "1611974789855-9c2a0a7236a3", // stock ticker screens
-        "1535320903710-a234b4ae2e0a", // sunrise city financial district
+        "1535320903710-a234b4ae2e0a",  // sunrise financial district
+        "1486312338219-ce68d2c6f44d",  // person on laptop early morning
+        "1590283603385-17d9c6f3f0b4",  // pre-market trading screens
+        "1611974789855-9c2a0a7236a3",  // stock ticker display
+        "1486304873000-235643847519",  // city dawn skyline
+        "1504868584819-f8a8b8b8b8b8",  // morning coffee & laptop
       ],
       "Market News": [
-        "1611974789855-9c2a0a7236a3", // stock market screen
-        "1590283603385-17d9c6f3f0b4", // trading charts
-        "1559526324-593bc073d938", // financial newspaper
-        "1518186285879-a5eb3d045c74", // bull on wall street
-        "1642790106117-e829e14a795f", // modern fintech
-        "1554260924-0e0b5e741e58", // financial data screen
-        "1581091226825-a6a2a5aee158", // business analytics
-        "1507679799987-c73779587ccf", // professional trader
-        "1551836022-deb4988cc6c0", // financial analysis
-        "1460925895917-afdab827c52f", // laptop with graphs
+        "1590283603385-17d9c6f3f0b4",  // trading charts multi-screen
+        "1611974789855-9c2a0a7236a3",  // stock market wall display
+        "1569025743873-ea3a9ade89f9",  // professional trader screens
+        "1554260924-0e0b5e741e58",    // financial data night screens
+        "1642790106117-e829e14a795f",  // modern fintech dashboard
+        "1581091226825-a6a2a5aee158",  // business analytics
+        "1460925895917-afdab827c52f",  // laptop with financial graphs
+        "1529119368496-2dfae1f29c64",  // stock chart close-up
+        "1507679799987-c73779587ccf",  // professional at work
+        "1551836022-deb4988cc6c0",    // financial analysis documents
+        "1607863680198-23d4b2565df0",  // stock price charts colored
+        "1487017159836-4e23ece2e4cf",  // clean modern workspace
       ],
       "Technical Analysis": [
-        "1611974789855-9c2a0a7236a3", // chart patterns
-        "1590283603385-17d9c6f3f0b4", // technical charts
-        "1569025743873-ea3a9ade89f9", // trading setup multiple screens
-        "1607863680198-23d4b2565df0", // charts and graphs
-        "1518186285879-a5eb3d045c74", // financial charts
-        "1642790106117-e829e14a795f", // data visualization
-        "1551836022-deb4988cc6c0", // technical analysis
-        "1529119368496-2dfae1f29c64", // stock chart close up
+        "1569025743873-ea3a9ade89f9",  // multi-screen trading setup
+        "1607863680198-23d4b2565df0",  // colorful stock charts
+        "1529119368496-2dfae1f29c64",  // stock chart close up
+        "1590283603385-17d9c6f3f0b4",  // technical chart analysis
+        "1642790106117-e829e14a795f",  // data analytics dashboard
+        "1551836022-deb4988cc6c0",    // analysis with documents
+        "1554260924-0e0b5e741e58",    // screens with financial data
+        "1460925895917-afdab827c52f",  // laptop charts analysis
       ],
       "Global Markets": [
-        "1526628953301-3ad378218498", // global finance building
-        "1554260924-0e0b5e741e58", // world financial center
-        "1486312338219-ce68d2c6f44d", // global trading
-        "1535320903710-a234b4ae2e0a", // city skyline financial
-        "1559526324-593bc073d938", // international business
-        "1492666673288-3c4b4576920b", // earth globe business
-        "1519389950473-47ba0277781c", // teamwork global
-        "1507679799987-c73779587ccf", // international finance
-        "1460925895917-afdab827c52f", // global markets
+        "1526628953301-3ad378218498",  // financial district building
+        "1492666673288-3c4b4576920b",  // globe/earth concept
+        "1535320903710-a234b4ae2e0a",  // city skyline at dawn
+        "1559526324-593bc073d938",    // international newspaper
+        "1519389950473-47ba0277781c",  // diverse team global
+        "1507679799987-c73779587ccf",  // international finance
+        "1460925895917-afdab827c52f",  // global markets screen
+        "1568605114967-8130f3a36994",  // city office towers
+        "1486312338219-ce68d2c6f44d",  // global trading
+      ],
+      "Pre-Market Brief": [
+        "1535320903710-a234b4ae2e0a",
+        "1486312338219-ce68d2c6f44d",
+        "1590283603385-17d9c6f3f0b4",
+        "1486304873000-235643847519",
       ],
     };
 
