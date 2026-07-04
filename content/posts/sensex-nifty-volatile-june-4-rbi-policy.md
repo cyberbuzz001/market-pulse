@@ -8,7 +8,7 @@ coverImage: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=f
 
 Indian benchmark indices **NSE Nifty 50** and **BSE Sensex** experienced a volatile gap-down session on Thursday, June 4, 2026. Global market triggers, geopolitical tensions, and local rate expectations kept retail and institutional investors on the sidelines.
 
-The BSE Sensex plummeted by approximately **410 points** at the opening bell, tracking key supports at 73,935. Meanwhile, the broader Nifty 50 slid **123 points** lower to launch trading at 23,282. Despite the initial morning weakness, mid-session trading showed signs of recovery as midcap and smallcap sectors pushed indices back to flat levels.
+The BSE Sensex plummeted by approximately **410 points** at the opening bell, tracking key supports at 78,500. Meanwhile, the broader Nifty 50 slid **123 points** lower to launch trading at 23,477. Despite the initial morning weakness, mid-session trading showed signs of recovery as midcap and smallcap sectors pushed indices back to flat levels.
 
 ---
 
@@ -20,7 +20,7 @@ Three key factors contributed to the cautious sentiment across Dalal Street:
 Geopolitical uncertainty escalated in the Middle East overnight, affecting global crude pricing models and energy supply lines. As an oil-importing nation, India remains highly sensitive to energy supply shocks.
 
 ### 2. Relentless FII Outflows
-Foreign Institutional Investors (FIIs) continued their selling streak in the cash market, offsetting domestic institutional purchases. 
+Foreign Institutional Investors (FIIs) continued their selling streak in the cash market, offsetting domestic institutional purchases. Notably, stocks like **Reliance Industries** (~₹1,350) and **HDFC Bank** (~₹820) witnessed significant FII selling.
 
 ### 3. Cautious Eyes on RBI Policy Decision
 The Reserve Bank of India's (RBI) Monetary Policy Committee (MPC) is scheduled to announce its benchmark interest rate decision on **Friday, June 5, 2026**. Economists widely expect the repo rate to remain unchanged at 6.50%, but investors are monitoring Governor Shaktikanta Das's commentary for future guidance.
@@ -33,11 +33,11 @@ A comparison of sectors shows mixed performance:
 
 | Outperforming Sectors | Underperforming Sectors |
 | :--- | :--- |
-| **Consumer Durables** (+1.2%) | **Information Technology** (-1.1%) |
+| **Consumer Durables** (+1.2%) | **Information Technology** (-1.1%), with **TCS** (~₹4,000) and **Infosys** (~₹1,450) leading the decline |
 | **Oil & Gas** (+0.95%) | **Realty** (-0.8%) |
 | **Chemicals** (+0.8%) | **Private Banking** (-0.75%) |
 
 ### Top Gainers & Losers
 *   **Adani Enterprises** led the Nifty gainers, rising over **2.1%** following rating upgrade speculations.
 *   **Jain Irrigation** surged a massive **12%** in broader trade.
-*   **Trent, Infosys**, and **Eicher Motors** emerged as the primary underperformers, dragging key benchmarks down.
+*   **Trent, Infosys**, and **Eicher Motors** emerged as the primary underperformers, dragging key benchmarks down. Other notable losers included **Tata Motors** (~₹950) and **Hindalco** (~₹950), which fell due to sector-specific concerns. On the other hand, **Tata Steel** (~₹170) gained marginally, driven by positive sentiments in the metal sector.

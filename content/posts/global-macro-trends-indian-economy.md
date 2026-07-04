@@ -2,7 +2,7 @@
 title: "How Global Macro Trends and US Fed Policies are Impacting the Indian Economy"
 date: "2026-06-03"
 category: "Global Economy"
-excerpt: "The Indian economy does not operate in a vacuum. Discover how US Federal Reserve rate decisions and global supply chain shifts are impacting Dalal Street."
+excerpt: "The Indian economy does not operate in a vacuum. Discover how US Federal Reserve rate decisions and global supply chain shifts are impacting Dalal Street, with the Nifty hovering around 22,000 to 24,600."
 coverImage: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1600&q=80"
 ---
 
@@ -28,7 +28,7 @@ Geopolitical tensions have accelerated the "China Plus One" strategy, wherein mu
 
 ## Real-World Impact
 
-1. **IT Sector Headwinds:** Indian IT services companies rely heavily on US and European clients. Fears of a global economic slowdown or sustained high interest rates often lead to reduced tech spending abroad, directly impacting the revenues of Indian IT giants.
+1. **IT Sector Headwinds:** Indian IT services companies rely heavily on US and European clients. Fears of a global economic slowdown or sustained high interest rates often lead to reduced tech spending abroad, directly impacting the revenues of Indian IT giants like TCS (~₹3,800 to ₹4,200) and Infosys (~₹1,400 to ₹1,600).
 2. **Oil Price Sensitivity:** India imports over 80% of its crude oil. Global geopolitical flashpoints that spike oil prices act as an immediate tax on the Indian economy, driving up domestic inflation and impacting corporate margins.
 
 ## Key Takeaways

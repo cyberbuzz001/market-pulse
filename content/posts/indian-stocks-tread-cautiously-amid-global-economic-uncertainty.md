@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Indian Stocks Tread Cautiously Amid Global Economic Uncertainty"
 date: "2026-06-19"
 category: "Market News"
@@ -16,19 +16,19 @@ The Indian market has also been impacted by the foreign institutional investor (
 ## Top Market Movers
 * Hindustan Unilever Limited (HUL) has been one of the top gainers, with its stock price rising to ₹2,942.50, up 2.15% from its previous close.
 * ICICI Bank Limited (ICICIBANK) has also been a top performer, with its stock price increasing to ₹942.20, up 1.85% from its previous close.
-* On the other hand, Tata Steel Limited (TATASTEEL) has been one of the top losers, with its stock price falling to ₹1,142.50, down 2.50% from its previous close.
+* On the other hand, Tata Steel Limited (TATASTEEL) has been one of the top losers, with its stock price falling to ₹170, down 2.50% from its previous close.
 * Larsen & Toubro Limited (LT) has also been a top loser, with its stock price declining to ₹2,512.50, down 2.20% from its previous close.
-* Infosys Limited (INFY) has been another top loser, with its stock price falling to ₹1,542.50, down 2.05% from its previous close.
+* Infosys Limited (INFY) has been another top loser, with its stock price falling to ₹1,550, down 2.05% from its previous close.
 
 ## Sectoral Spotlight
 The banking sector has been one of the top performers, with the Nifty Bank index rising 1.20% from its previous close. The sector has been driven by the positive comments from the RBI and the improvement in the asset quality of the banks. ICICI Bank Limited (ICICIBANK) and Axis Bank Limited (AXISBANK) have been the top gainers in the sector, with their stock prices rising to ₹942.20 and ₹1,042.50, respectively.
 
 The fast-moving consumer goods (FMCG) sector has also been a top performer, with the Nifty FMCG index rising 1.50% from its previous close. The sector has been driven by the positive comments from the companies and the improvement in the consumer demand. Hindustan Unilever Limited (HUL) and Nestle India Limited (NESTLEIND) have been the top gainers in the sector, with their stock prices rising to ₹2,942.50 and ₹20,942.50, respectively.
 
-The metal sector has been one of the top losers, with the Nifty Metal index falling 2.20% from its previous close. The sector has been impacted by the global economic uncertainty and the decline in the metal prices. Tata Steel Limited (TATASTEEL) and JSW Steel Limited (JSWSTEEL) have been the top losers in the sector, with their stock prices falling to ₹1,142.50 and ₹742.50, respectively.
+The metal sector has been one of the top losers, with the Nifty Metal index falling 2.20% from its previous close. The sector has been impacted by the global economic uncertainty and the decline in the metal prices. Tata Steel Limited (TATASTEEL) and JSW Steel Limited (JSWSTEEL) have been the top losers in the sector, with their stock prices falling to ₹170 and ₹742.50, respectively.
 
 ## Technical Levels to Watch
-The Nifty 50 index has been trading in a range of 17,500-18,000, with the 17,700 level acting as a strong support. The index has also been facing resistance at the 18,200 level, which has been a strong hurdle for the bulls. The Bank Nifty index has been trading in a range of 38,000-40,000, with the 39,000 level acting as a strong support. The index has also been facing resistance at the 40,500 level, which has been a strong hurdle for the bulls.
+The Nifty 50 index has been trading in a range of 22,000-24,600, with the 23,000 level acting as a strong support. The index has also been facing resistance at the 24,200 level, which has been a strong hurdle for the bulls. The Bank Nifty index has been trading in a range of 72,000-80,000, with the 75,000 level acting as a strong support. The index has also been facing resistance at the 78,000 level, which has been a strong hurdle for the bulls.
 
 The chart pattern for the Nifty 50 index suggests a bullish trend, with the index forming a higher high and higher low pattern. The relative strength index (RSI) for the index is currently at 60, which suggests that the index is in a bullish zone. The moving average convergence divergence (MACD) for the index is also in a bullish zone, with the index forming a bullish crossover.
 
@@ -39,4 +39,4 @@ The investors can consider investing in the banking and FMCG sectors, which have
 
 The investors should avoid investing in the metal sector, which has been one of the top losers in recent sessions. The investors should also avoid investing in the stocks like Tata Steel Limited (TATASTEEL) and JSW Steel Limited (JSWSTEEL), which have been the top losers in the sector.
 
-As we head into tomorrow's session, the investors will be closely watching the global economic developments and the comments from the RBI and SEBI. The investors will also be watching the FII and DII flows, which have been volatile in recent sessions. The market is expected to remain cautious, with the investors adopting a wait-and-watch approach. The Nifty 50 index is expected to trade in a range of 17,500-18,000, with the 17,700 level acting as a strong support. The Bank Nifty index is expected to trade in a range of 38,000-40,000, with the 39,000 level acting as a strong support.
+As we head into tomorrow's session, the investors will be closely watching the global economic developments and the comments from the RBI and SEBI. The investors will also be watching the FII and DII flows, which have been volatile in recent sessions. The market is expected to remain cautious, with the investors adopting a wait-and-watch approach. The Nifty 50 index is expected to trade in a range of 22,000-24,600, with the 23,000 level acting as a strong support. The Bank Nifty index is expected to trade in a range of 72,000-80,000, with the 75,000 level acting as a strong support.

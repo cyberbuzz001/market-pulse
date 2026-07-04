@@ -6,7 +6,7 @@ coverImage: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=f
 excerpt: "As the benchmark indices touch record highs amidst robust macroeconomic indicators, we dissect the underlying factors driving domestic equities. Discover how capital expenditure, manufacturing momentum, and shifting institutional flows are shaping the next phase of the Indian market."
 ---
 
-The Indian equity markets have once again demonstrated remarkable resilience, with the benchmark Nifty 50 and S&P BSE Sensex scaling new heights in recent trading sessions. This upward trajectory is not merely a speculative surge but is deeply anchored in robust macroeconomic fundamentals, healthy corporate earnings, and a structural shift in domestic savings. 
+The Indian equity markets have once again demonstrated remarkable resilience, with the benchmark Nifty 50 hovering around 22,000 to 24,600 and the S&P BSE Sensex scaling new heights in recent trading sessions, ranging between 72,000 to 80,000. This upward trajectory is not merely a speculative surge but is deeply anchored in robust macroeconomic fundamentals, healthy corporate earnings, and a structural shift in domestic savings. 
 
 As market participants navigate this high-valuation environment, we analyze the key triggers driving the current market momentum and what lies ahead for Dalal Street.
 
@@ -38,13 +38,13 @@ While foreign flows remain sensitive to global interest rate cycles—specifical
 In the current leg of the bull run, we are witnessing a healthy sectoral rotation, which prevents the market from becoming unsustainably overheated in a single pocket.
 
 ### Banking, Financial Services & Insurance (BFSI)
-The banking sector, particularly large private and public sector banks, continues to exhibit strong credit growth (projected at 14-16% YoY) and remarkably clean balance sheets. With Non-Performing Assets (NPAs) at multi-year lows, the sector remains the bedrock of Nifty's earnings growth.
+The banking sector, particularly large private and public sector banks like HDFC Bank, trading around ₹750 to ₹850, continues to exhibit strong credit growth (projected at 14-16% YoY) and remarkably clean balance sheets. With Non-Performing Assets (NPAs) at multi-year lows, the sector remains the bedrock of Nifty's earnings growth.
 
 ### Automotive and EV Ecosystem
-The auto sector is undergoing a structural transition. Strong urban and recovering rural demand, coupled with rapid premiumization across two-wheelers and passenger vehicles, has kept margins healthy. Furthermore, companies actively building the Electric Vehicle (EV) value chain are commanding premium valuations.
+The auto sector is undergoing a structural transition. Strong urban and recovering rural demand, coupled with rapid premiumization across two-wheelers and passenger vehicles, has kept margins healthy for companies like Tata Motors, trading around ₹900 to ₹1,050. Furthermore, companies actively building the Electric Vehicle (EV) value chain are commanding premium valuations.
 
 ### The IT Conundrum
-Conversely, the Information Technology (IT) sector continues to undergo consolidation. While deal wins remain steady, discretionary tech spend in North America and Europe remains soft, keeping valuation multiples of major IT exporters under check.
+Conversely, the Information Technology (IT) sector continues to undergo consolidation. While deal wins remain steady, discretionary tech spend in North America and Europe remains soft, keeping valuation multiples of major IT exporters like TCS, trading around ₹3,800 to ₹4,200, and Infosys, trading around ₹1,400 to ₹1,600, under check.
 
 ---
 
@@ -59,7 +59,7 @@ Key Macroeconomic Indicators
 ```
 
 ### Are Valuations Stretched?
-The Nifty 50 is currently trading at a 12-month forward Price-to-Earnings (P/E) multiple of approximately **20.5x**, which is slightly above its long-term historical average of 18.9x. While large-caps are reasonably valued given the earnings growth profile, certain pockets in the mid-cap and small-cap segments exhibit signs of irrational exuberance, where valuations have run ahead of fundamentals.
+The Nifty 50 is currently trading at a 12-month forward Price-to-Earnings (P/E) multiple of approximately **20.5x**, which is slightly above its long-term historical average of 18.9x. While large-caps like Reliance Industries, trading around ₹1,250 to ₹1,400, are reasonably valued given the earnings growth profile, certain pockets in the mid-cap and small-cap segments exhibit signs of irrational exuberance, where valuations have run ahead of fundamentals. Stocks like Tata Steel, trading around ₹150 to ₹190, and Hindalco, trading around ₹900 to ₹1,000, are examples of this trend.
 
 ---
 

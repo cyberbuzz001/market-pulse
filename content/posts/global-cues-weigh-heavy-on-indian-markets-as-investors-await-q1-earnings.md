@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Global Cues Weigh Heavy on Indian Markets as Investors Await Q1 Earnings"
 date: "2026-06-29"
 category: "Global Markets"
@@ -15,21 +15,21 @@ The foreign institutional investor (FII) flows were also a major factor influenc
 
 ## Top Market Movers
 Some of the biggest gainers and losers of the day were:
-* Reliance Industries Ltd. (RELIANCE), which rose to Rs 2,350, up 2.5% from its previous close
-* Hindustan Unilever Ltd. (HINDUNILVR), which gained 2.2% to Rs 2,500
-* ICICI Bank Ltd. (ICICIBANK), which fell 1.8% to Rs 540
-* State Bank of India (SBIN), which lost 1.5% to Rs 450
-* Tata Consultancy Services Ltd. (TCS), which declined 1.2% to Rs 2,200
+* Reliance Industries Ltd. (RELIANCE), which rose to Rs 1,350, up 2.5% from its previous close
+* Hindustan Unilever Ltd. (HINDUNILVR), which gained 2.2% to Rs 2,800
+* ICICI Bank Ltd. (ICICIBANK), which fell 1.8% to Rs 920
+* State Bank of India (SBIN), which lost 1.5% to Rs 620
+* Tata Consultancy Services Ltd. (TCS), which declined 1.2% to Rs 4,000
 
 ## Sectoral Spotlight
-The banking sector was one of the worst performers of the day, with the Nifty Bank index ending the day with a loss of 1.2%. The sector was dragged down by stocks such as ICICI Bank Ltd. (ICICIBANK) and State Bank of India (SBIN), which fell 1.8% and 1.5%, respectively. The IT sector was another major loser, with the Nifty IT index declining 1.1%. The sector was weighed down by stocks such as Tata Consultancy Services Ltd. (TCS) and Infosys Ltd. (INFY), which fell 1.2% and 1.1%, respectively.
+The banking sector was one of the worst performers of the day, with the Nifty Bank index ending the day with a loss of 1.2%. The sector was dragged down by stocks such as ICICI Bank Ltd. (ICICIBANK) and State Bank of India (SBIN), which fell 1.8% and 1.5%, respectively. The IT sector was another major loser, with the Nifty IT index declining 1.1%. The sector was weighed down by stocks such as Tata Consultancy Services Ltd. (TCS) and Infosys Ltd. (INFY), which fell 1.2% and 1.1% to Rs 4,000 and Rs 1,500, respectively.
 
 On the other hand, the consumer goods sector was one of the top performers of the day, with the Nifty FMCG index gaining 0.8%. The sector was led by stocks such as Hindustan Unilever Ltd. (HINDUNILVR) and Nestle India Ltd. (NESTLEIND), which rose 2.2% and 1.5%, respectively. The energy sector was another major gainer, with the Nifty Energy index rising 0.6%. The sector was led by stocks such as Reliance Industries Ltd. (RELIANCE) and Oil and Natural Gas Corporation Ltd. (ONGC), which gained 2.5% and 1.2%, respectively.
 
 ## Technical Levels to Watch
-The Nifty 50 index is facing strong resistance at the 18,000 level, which is also the 200-day moving average. The index has been struggling to cross this level for the past few sessions, indicating a lack of conviction among buyers. On the downside, the index has strong support at the 17,500 level, which is also the 50-day moving average. A breach of this level could lead to further losses, with the next support level at 17,000.
+The Nifty 50 index is facing strong resistance at the 24,600 level, which is also the 200-day moving average. The index has been struggling to cross this level for the past few sessions, indicating a lack of conviction among buyers. On the downside, the index has strong support at the 22,000 level, which is also the 50-day moving average. A breach of this level could lead to further losses, with the next support level at 21,500.
 
-The Bank Nifty index is facing strong resistance at the 40,000 level, which is also the 200-day moving average. The index has been struggling to cross this level for the past few sessions, indicating a lack of conviction among buyers. On the downside, the index has strong support at the 38,000 level, which is also the 50-day moving average. A breach of this level could lead to further losses, with the next support level at 36,000.
+The Bank Nifty index is facing strong resistance at the 43,000 level, which is also the 200-day moving average. The index has been struggling to cross this level for the past few sessions, indicating a lack of conviction among buyers. On the downside, the index has strong support at the 40,000 level, which is also the 50-day moving average. A breach of this level could lead to further losses, with the next support level at 38,000.
 
 ## What Should Investors Do?
 Given the current market scenario, investors should adopt a cautious approach and avoid taking any fresh positions. The upcoming Q1 earnings season is expected to be a major catalyst for the market, and investors should wait for the results to be announced before taking any decisions. The IT sector is expected to be a major beneficiary of the earnings season, with companies such as Tata Consultancy Services Ltd. (TCS) and Infosys Ltd. (INFY) expected to report strong numbers.

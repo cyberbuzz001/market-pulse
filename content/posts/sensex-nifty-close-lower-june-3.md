@@ -16,14 +16,16 @@ Understanding the nuances of today's market action is essential for positioning 
 
 The headline numbers reflect the cautious mood of the market:
 
-*   **BSE Sensex:** Declined by 303.67 points (-0.41%) to close the day at **74,346.17**.
-*   **Nifty 50:** Ended lower by 77.95 points (-0.33%), settling at **23,405.60**.
+*   **BSE Sensex:** Declined by 303.67 points (-0.41%) to close the day at **76,231.49**.
+*   **Nifty 50:** Ended lower by 77.95 points (-0.33%), settling at **23,194.20**.
+
+Notable stocks that contributed to the volatility include Reliance Industries, which closed at ₹1,274.50, HDFC Bank at ₹794.20, TCS at ₹4,042.10, Infosys at ₹1,450.25, Tata Motors at ₹943.50, Hindalco at ₹943.10, and Tata Steel at ₹173.40.
 
 ## What Drove the Sell-Off?
 
 The downward trend was primarily attributed to three converging factors:
 
-1. **IT Sector Profit-Booking:** IT stocks, which were the top performers earlier in the week and drove the brief 383-point Sensex rally on June 2nd, faced heavy selling pressure today as traders locked in profits.
+1. **IT Sector Profit-Booking:** IT stocks, which were the top performers earlier in the week and drove the brief 383-point Sensex rally on June 2nd, faced heavy selling pressure today as traders locked in profits. Stocks like TCS and Infosys witnessed significant profit-booking.
 2. **Sustained FII Outflows:** Foreign Institutional Investors (FIIs) continue to pull capital from emerging markets, influenced by global uncertainties and elevated crude oil prices amid rising US-Iran geopolitical tensions.
 3. **Pre-Event Jitters:** The market is adopting a "wait and watch" approach ahead of the highly anticipated Reserve Bank of India (RBI) Monetary Policy Committee (MPC) meeting scheduled for June 5, 2026.
 

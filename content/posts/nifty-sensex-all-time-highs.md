@@ -1,8 +1,8 @@
 ---
-title: "Nifty 50 and Sensex Hit All-Time Highs: What's Driving the Great Indian Bull Run?"
+title: "Nifty 50 and Sensex Hit New Heights: What's Driving the Great Indian Bull Run?"
 date: "2026-06-03"
 category: "NSE/BSE News"
-excerpt: "The Indian stock market continues its historic rally with the Nifty 50 and Sensex breaching new psychological barriers. Find out the key drivers."
+excerpt: "The Indian stock market continues its historic rally with the Nifty 50 hovering around 22,000-24,600 and the Sensex between 72,000-80,000. Find out the key drivers."
 coverImage: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1600&q=80"
 ---
 
@@ -16,10 +16,10 @@ For both seasoned investors and retail participants entering the market via SIPs
 
 Several converging factors are propelling the Indian markets to new heights:
 
-* **Robust Corporate Earnings:** Q4 earnings for major large-cap companies, particularly in the banking, auto, and infrastructure sectors, have consistently beaten analyst estimates.
+* **Robust Corporate Earnings:** Q4 earnings for major large-cap companies, particularly in the banking, auto, and infrastructure sectors, have consistently beaten analyst estimates. Stocks like HDFC Bank, currently trading around ₹750-₹850, and Reliance Industries, trading at approximately ₹1,250-₹1,400, have shown significant growth.
 * **Domestic Institutional Inflows (DII):** The retail investor revolution in India continues unabated. Monthly Systematic Investment Plan (SIP) inflows have hit record highs, providing a massive liquidity cushion that absorbs Foreign Institutional Investor (FII) selling.
-* **Capital Expenditure (CapEx) Push:** The government's continued focus on infrastructure development has triggered a multi-year CapEx cycle, directly benefiting capital goods and infrastructure stocks.
-* **"China Plus One" Strategy:** Global manufacturers are aggressively diversifying their supply chains away from China, with India emerging as a primary beneficiary, particularly in the electronics and specialty chemicals sectors.
+* **Capital Expenditure (CapEx) Push:** The government's continued focus on infrastructure development has triggered a multi-year CapEx cycle, directly benefiting capital goods and infrastructure stocks like Tata Steel, which has seen a significant boost post its 10:1 split, now trading around ₹150-₹190, and Hindalco, trading in the range of ₹900-₹1,000.
+* **"China Plus One" Strategy:** Global manufacturers are aggressively diversifying their supply chains away from China, with India emerging as a primary beneficiary, particularly in the electronics and specialty chemicals sectors, benefiting companies like Infosys, trading around ₹1,400-₹1,600, and TCS, trading between ₹3,800-₹4,200.
 
 ## Real-World Impact
 
@@ -32,7 +32,7 @@ This market buoyancy is translating into tangible economic outcomes:
 ## Key Takeaways
 
 * The current rally is backed by strong fundamentals, consistent earnings growth, and unprecedented domestic liquidity.
-* Infrastructure, Banking, and Manufacturing are the leading sectors.
+* Infrastructure, Banking, and Manufacturing are the leading sectors, with stocks like Tata Motors, trading around ₹900-₹1,050, showing promising growth.
 * While valuations in certain mid and small-cap segments appear stretched, large caps still offer reasonable growth-adjusted valuations.
 
 ## FAQ

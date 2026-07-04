@@ -8,18 +8,18 @@ coverImage: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=f
 
 ## A Robust Start for the Primary Market
 
-Despite broader market volatility and shifting macroeconomic headwinds, the Indian Initial Public Offering (IPO) market continues to demonstrate remarkable resilience. As we kick off June 2026, a diverse mix of both mainboard giants and high-growth Small and Medium Enterprises (SMEs) are tapping into Dalal Street for capital.
+Despite broader market volatility and shifting macroeconomic headwinds, with the Nifty 50 hovering around 22,000 to 24,600 and the Sensex between 72,000 to 80,000, the Indian Initial Public Offering (IPO) market continues to demonstrate remarkable resilience. As we kick off June 2026, a diverse mix of both mainboard giants and high-growth Small and Medium Enterprises (SMEs) are tapping into Dalal Street for capital, where stocks like Reliance Industries are trading around ₹1,250 to ₹1,400 and HDFC Bank around ₹750 to ₹850.
 
-Whether you are looking for long-term portfolio additions or listing-day gains, here are the most critical IPOs to watch this week.
+Whether you are looking for long-term portfolio additions or listing-day gains, here are the most critical IPOs to watch this week, alongside other market movers like TCS, trading between ₹3,800 to ₹4,200, and Infosys, ranging from ₹1,400 to ₹1,600.
 
 ## Mainboard Highlights
 
 ### 1. CMR Green Technologies
-One of the most anticipated mainboard IPOs of the month, CMR Green Technologies is a leading player in the non-ferrous metal recycling sector.
+One of the most anticipated mainboard IPOs of the month, CMR Green Technologies is a leading player in the non-ferrous metal recycling sector, similar to how Hindalco and Tata Steel, with the latter trading around ₹150 to ₹190 post its 10:1 split, are key players in their respective domains.
 
 *   **Subscription Dates:** June 3, 2026 – June 5, 2026
 *   **Price Band:** ₹182 – ₹192 per share
-*   **The Details:** This IPO is structured primarily as an Offer for Sale (OFS), meaning existing promoters are offloading their stakes. The company's strong focus on sustainable recycling positions it well for ESG-focused institutional investors.
+*   **The Details:** This IPO is structured primarily as an Offer for Sale (OFS), meaning existing promoters are offloading their stakes. The company's strong focus on sustainable recycling positions it well for ESG-focused institutional investors, much like the appeal of Tata Motors, trading around ₹900 to ₹1,050, due to its electric vehicle initiatives.
 
 ### 2. Hexagon Nutrition
 For investors interested in the fast-moving consumer goods (FMCG) and healthcare crossover space, Hexagon Nutrition is launching its offering shortly after CMR Green.

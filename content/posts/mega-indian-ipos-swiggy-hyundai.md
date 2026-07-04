@@ -8,7 +8,7 @@ coverImage: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=f
 
 ## The Primary Market Boom in India
 
-The Indian Initial Public Offering (IPO) market is experiencing a golden era. Fueled by high secondary market valuations and massive retail participation, 2026 is shaping up to be a record-breaking year for public listings on the Dalal Street. 
+The Indian Initial Public Offering (IPO) market is experiencing a golden era. Fueled by high secondary market valuations, with the Nifty 50 hovering around 22,000 to 24,600 and the Sensex between 72,000 to 80,000, and massive retail participation, 2026 is shaping up to be a record-breaking year for public listings on the Dalal Street. Notable stocks like Reliance Industries, currently trading around ₹1,250 to ₹1,400, and HDFC Bank, trading between ₹750 to ₹850, reflect the market's optimism. 
 
 Two of the most highly anticipated mega-IPOs currently grabbing headlines are food delivery giant Swiggy and the Indian arm of South Korean automaker Hyundai.
 

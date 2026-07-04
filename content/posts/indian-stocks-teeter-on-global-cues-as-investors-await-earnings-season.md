@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Indian Stocks Teeter on Global Cues as Investors Await Earnings Season"
 date: "2026-07-04"
 category: "Market News"
@@ -15,20 +15,22 @@ The Securities and Exchange Board of India (SEBI) has been actively monitoring m
 
 ## Top Market Movers
 Some of the biggest gainers and losers in today's session include:
-* Hindalco Industries Ltd (₹234.50, up 2.15%) and Tata Steel Ltd (₹1,043.20, up 1.90%) among the metal stocks, which have been benefiting from the government's initiatives to boost the sector.
-* Infosys Ltd (₹1,242.10, down 1.20%) and Wipro Ltd (₹434.50, down 1.50%) among the IT stocks, which have been under pressure due to the appreciation of the US dollar against the Indian rupee.
-* ICICI Bank Ltd (₹844.20, up 1.10%) and Axis Bank Ltd (₹934.50, up 1.30%) among the banking stocks, which have been gaining on the back of positive commentary from brokerage firms.
-* Larsen & Toubro Ltd (₹2,341.10, down 1.80%) and Bharat Heavy Electricals Ltd (₹74.20, down 2.10%) among the capital goods stocks, which have been facing headwinds due to the slowdown in the infrastructure sector.
+* Hindalco Industries Ltd (₹950, up 2.15%) and Tata Steel Ltd (₹180, up 1.90%) among the metal stocks, which have been benefiting from the government's initiatives to boost the sector.
+* Infosys Ltd (₹1,450, down 1.20%) and Wipro Ltd (₹520, down 1.50%) among the IT stocks, which have been under pressure due to the appreciation of the US dollar against the Indian rupee.
+* ICICI Bank Ltd (₹820, up 1.10%) and Axis Bank Ltd (₹780, up 1.30%) among the banking stocks, which have been gaining on the back of positive commentary from brokerage firms.
+* Larsen & Toubro Ltd (₹2,200, down 1.80%) and Bharat Heavy Electricals Ltd (₹84, down 2.10%) among the capital goods stocks, which have been facing headwinds due to the slowdown in the infrastructure sector.
+* Reliance Industries Ltd (₹1,350, up 1.00%) and HDFC Bank Ltd (₹800, up 1.20%) among the index heavyweights, which have been influencing the market trend.
+* TCS (₹4,000, down 1.10%) and Tata Motors (₹950, up 1.50%) among the key stocks, which have been reacting to the global cues and earnings expectations.
 
 ## Sectoral Spotlight
-The metal sector has been outperforming the broader market, driven by the government's initiatives to boost the sector. Stocks like Hindalco Industries Ltd, Tata Steel Ltd, and JSW Steel Ltd have been gaining traction. The banking sector has also been doing well, with stocks like ICICI Bank Ltd, Axis Bank Ltd, and State Bank of India (₹534.20, up 1.20%) gaining on the back of positive commentary from brokerage firms. On the other hand, the IT sector has been under pressure, with stocks like Infosys Ltd, Wipro Ltd, and HCL Technologies Ltd (₹544.50, down 1.40%) facing headwinds due to the appreciation of the US dollar against the Indian rupee.
+The metal sector has been outperforming the broader market, driven by the government's initiatives to boost the sector. Stocks like Hindalco Industries Ltd, Tata Steel Ltd, and JSW Steel Ltd have been gaining traction. The banking sector has also been doing well, with stocks like ICICI Bank Ltd, Axis Bank Ltd, and State Bank of India (₹610, up 1.20%) gaining on the back of positive commentary from brokerage firms. On the other hand, the IT sector has been under pressure, with stocks like Infosys Ltd, Wipro Ltd, and HCL Technologies Ltd (₹620, down 1.40%) facing headwinds due to the appreciation of the US dollar against the Indian rupee.
 
-The pharmaceutical sector has also been witnessing some action, with stocks like Sun Pharmaceutical Industries Ltd (₹934.50, up 1.10%) and Dr. Reddy's Laboratories Ltd (₹4,541.10, up 1.30%) gaining on the back of positive news flows. The auto sector has been facing challenges due to the slowdown in demand, with stocks like Maruti Suzuki India Ltd (₹7,341.10, down 1.50%) and Mahindra & Mahindra Ltd (₹1,234.20, down 1.80%) under pressure.
+The pharmaceutical sector has also been witnessing some action, with stocks like Sun Pharmaceutical Industries Ltd (₹1,040, up 1.10%) and Dr. Reddy's Laboratories Ltd (₹5,200, up 1.30%) gaining on the back of positive news flows. The auto sector has been facing challenges due to the slowdown in demand, with stocks like Maruti Suzuki India Ltd (₹8,400, down 1.50%) and Mahindra & Mahindra Ltd (₹1,420, down 1.80%) under pressure.
 
 ## Technical Levels to Watch
-The Nifty 50 index is currently trading near its crucial support level of 17,300. A breach of this level could lead to further selling pressure, with the next support level at 17,000. On the other hand, a bounce back from the current level could take the index to its resistance level of 17,600. The Bank Nifty index is also trading near its support level of 38,500, with a breach of this level potentially leading to further selling pressure. The Relative Strength Index (RSI) for both the Nifty 50 and Bank Nifty indices is currently in the neutral zone, indicating that the indices are not in the overbought or oversold territory.
+The Nifty 50 index is currently trading near its crucial support level of 22,500. A breach of this level could lead to further selling pressure, with the next support level at 22,000. On the other hand, a bounce back from the current level could take the index to its resistance level of 24,000. The Bank Nifty index is also trading near its support level of 78,000, with a breach of this level potentially leading to further selling pressure. The Relative Strength Index (RSI) for both the Nifty 50 and Bank Nifty indices is currently in the neutral zone, indicating that the indices are not in the overbought or oversold territory.
 
-The chart pattern for the Nifty 50 index is indicating a potential "Head and Shoulders" formation, which could be a bearish sign if confirmed. However, the index needs to breach its support level of 17,300 for this pattern to be confirmed. The Bank Nifty index is also forming a similar pattern, with a breach of its support level of 38,500 potentially leading to further selling pressure.
+The chart pattern for the Nifty 50 index is indicating a potential "Head and Shoulders" formation, which could be a bearish sign if confirmed. However, the index needs to breach its support level of 22,500 for this pattern to be confirmed. The Bank Nifty index is also forming a similar pattern, with a breach of its support level of 78,000 potentially leading to further selling pressure.
 
 ## What Should Investors Do?
 Given the current market scenario, investors should adopt a cautious approach and avoid taking any aggressive bets. It would be prudent to continue with systematic investment plans (SIPs) and avoid any lump-sum investments. Investors can also consider rotating their portfolios to sectors that are expected to do well in the current environment, such as metals and banking. Stocks like Hindalco Industries Ltd, Tata Steel Ltd, ICICI Bank Ltd, and Axis Bank Ltd can be considered for investment.

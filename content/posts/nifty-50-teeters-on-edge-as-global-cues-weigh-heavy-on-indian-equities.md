@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Nifty 50 Teeters on Edge as Global Cues Weigh Heavy on Indian Equities"
 date: "2026-06-13"
 category: "Market News"
@@ -15,21 +15,21 @@ Despite the challenges posed by global headwinds, the Indian economy remains res
 
 ## Top Market Movers
 Some of the biggest gainers and losers of the day include:
-* Hindalco Industries (HINDALCO), up 2.5% to ₹243.50
-* Tata Steel (TATASTEEL), up 2.2% to ₹1,043.20
-* Infosys (INFY), down 1.8% to ₹1,432.10
-* ICICI Bank (ICICIBANK), down 1.5% to ₹842.50
-* Larsen & Toubro (LT), up 1.2% to ₹2,051.10
+* Hindalco Industries (HINDALCO), up 2.5% to ₹950
+* Tata Steel (TATASTEEL), up 2.2% to ₹180
+* Infosys (INFY), down 1.8% to ₹1,550
+* ICICI Bank (ICICIBANK), down 1.5% to ₹950
+* Larsen & Toubro (LT), up 1.2% to ₹2,800
 
 ## Sectoral Spotlight
-The banking sector has been under pressure in recent sessions, with concerns over asset quality and profitability weighing on investor sentiment. Stocks like State Bank of India (SBIN) and Axis Bank (AXISBANK) have been feeling the heat, with the former down 1.2% to ₹523.20 and the latter down 1.1% to ₹841.10. On the other hand, the IT sector has been witnessing a resurgence in demand, with companies like Tata Consultancy Services (TCS) and Wipro (WIPRO) benefiting from a pickup in outsourcing orders. The auto sector, too, has been in focus, with stocks like Maruti Suzuki (MARUTI) and Mahindra & Mahindra (M&M) witnessing a surge in demand for their products.
+The banking sector has been under pressure in recent sessions, with concerns over asset quality and profitability weighing on investor sentiment. Stocks like State Bank of India (SBIN) and Axis Bank (AXISBANK) have been feeling the heat, with the former down 1.2% to ₹650 and the latter down 1.1% to ₹950. On the other hand, the IT sector has been witnessing a resurgence in demand, with companies like Tata Consultancy Services (TCS) and Wipro (WIPRO) benefiting from a pickup in outsourcing orders. The auto sector, too, has been in focus, with stocks like Maruti Suzuki (MARUTI) and Mahindra & Mahindra (M&M) witnessing a surge in demand for their products.
 
 The metal sector has been another outperformer, with stocks like JSW Steel (JSWSTEEL) and Jindal Steel & Power (JINDALSTEL) benefiting from a pickup in demand for steel products. The sector has also been boosted by the government's decision to impose anti-dumping duties on certain steel products, with companies like Tata Steel and Hindalco Industries expected to benefit from the move. As the sector continues to evolve, investors will be keeping a close eye on the developments unfolding in the global steel market, with the US-China trade tensions and the European Union's (EU) steel import quotas dominating the headlines.
 
 ## Technical Levels to Watch
-The Nifty 50 index is currently trading near its key support level of 15,800, with a breakdown below this level expected to trigger a fresh wave of selling in the market. On the other hand, a move above the resistance level of 16,200 could see the index witnessing a short-covering rally, with the next target being the 16,500 level. The Bank Nifty index, too, is trading near its key support level of 34,500, with a breakdown below this level expected to trigger a fresh wave of selling in the banking sector.
+The Nifty 50 index is currently trading near its key support level of 22,000, with a breakdown below this level expected to trigger a fresh wave of selling in the market. On the other hand, a move above the resistance level of 24,000 could see the index witnessing a short-covering rally, with the next target being the 24,600 level. The Bank Nifty index, too, is trading near its key support level of 72,000, with a breakdown below this level expected to trigger a fresh wave of selling in the banking sector.
 
-From a chart pattern perspective, the Nifty 50 index is forming a bearish head-and-shoulders pattern, with the neckline support at 15,800. A breakdown below this level could see the index witnessing a sharp decline, with the next target being the 15,500 level. On the other hand, a move above the resistance level of 16,200 could see the index witnessing a short-covering rally, with the next target being the 16,500 level. As the market continues to evolve, investors will be keeping a close eye on the technical levels, with the RBI's monetary policy decision and the US Federal Reserve's interest rate outlook dominating the headlines.
+From a chart pattern perspective, the Nifty 50 index is forming a bearish head-and-shoulders pattern, with the neckline support at 22,000. A breakdown below this level could see the index witnessing a sharp decline, with the next target being the 21,500 level. On the other hand, a move above the resistance level of 24,000 could see the index witnessing a short-covering rally, with the next target being the 24,600 level. As the market continues to evolve, investors will be keeping a close eye on the technical levels, with the RBI's monetary policy decision and the US Federal Reserve's interest rate outlook dominating the headlines.
 
 ## What Should Investors Do?
 Given the uncertainty prevailing in the market, investors would do well to adopt a cautious approach, with a focus on defensive sectors like IT and pharmaceuticals. Stocks like Infosys and Sun Pharmaceutical Industries (SUNPHARMA) could be considered for investment, given their strong fundamentals and relatively low valuations. On the other hand, investors could consider reducing their exposure to banking and financial stocks, given the concerns over asset quality and profitability.
