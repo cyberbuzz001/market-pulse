@@ -30,12 +30,12 @@ export default function MarketTicker() {
     };
   }, []);
 
-  // Fallback data if API is slow or fails
+  // Fallback data if API is slow or fails (updated to actual 2026 post-split/bonus prices)
   const fallbackItems = [
-    { name: 'RELIANCE', value: '2985.40', change: 92.30, percent: '3.20', isUp: true, q: 'RELIANCE' },
+    { name: 'RELIANCE', value: '1304.00', change: 0.50, percent: '0.04', isUp: true, q: 'RELIANCE' },
     { name: 'TCS', value: '4105.10', change: 112.50, percent: '2.80', isUp: true, q: 'TCS' },
-    { name: 'HDFCBANK', value: '1650.00', change: 24.50, percent: '1.50', isUp: true, q: 'HDFCBANK' },
-    { name: 'INFY', value: '1480.90', change: 17.55, percent: '1.20', isUp: true, q: 'INFY' },
+    { name: 'HDFCBANK', value: '801.05', change: 5.15, percent: '0.65', isUp: true, q: 'HDFCBANK' },
+    { name: 'INFY', value: '1047.20', change: 6.30, percent: '0.61', isUp: true, q: 'INFY' },
     { name: 'ITC', value: '425.60', change: -7.80, percent: '-1.80', isUp: false, q: 'ITC' },
   ];
 

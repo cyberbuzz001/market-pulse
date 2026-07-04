@@ -7,14 +7,14 @@ const stockDatabase: Record<string, StockData> = {
   RELIANCE: {
     symbol: 'RELIANCE',
     name: 'Reliance Industries Ltd.',
-    price: 2985.40,
-    change: 92.30,
-    percent: 3.20,
+    price: 1304.00,
+    change: 0.50,
+    percent: 0.04,
     isUp: true,
-    mcap: '₹20.20 Lakh Cr',
-    pe: '28.4',
-    high52: '₹3,024.90',
-    low52: '₹2,220.30',
+    mcap: '₹17.65 Lakh Cr',
+    pe: '14.2',
+    high52: '₹1,611.80',
+    low52: '₹1,253.20',
     volume: '5.8M',
     yield: '0.35%',
     sector: 'Conglomerate / Energy'
@@ -37,14 +37,14 @@ const stockDatabase: Record<string, StockData> = {
   HDFCBANK: {
     symbol: 'HDFCBANK',
     name: 'HDFC Bank Ltd.',
-    price: 1650.00,
-    change: 24.50,
-    percent: 1.50,
+    price: 801.05,
+    change: 5.15,
+    percent: 0.65,
     isUp: true,
-    mcap: '₹12.56 Lakh Cr',
-    pe: '19.8',
-    high52: '₹1,750.00',
-    low52: '₹1,360.00',
+    mcap: '₹12.18 Lakh Cr',
+    pe: '17.6',
+    high52: '₹1,020.50',
+    low52: '₹726.65',
     volume: '15.4M',
     yield: '1.15%',
     sector: 'Banking & Finance'
@@ -52,14 +52,14 @@ const stockDatabase: Record<string, StockData> = {
   INFY: {
     symbol: 'INFY',
     name: 'Infosys Ltd.',
-    price: 1480.90,
-    change: 17.55,
-    percent: 1.20,
+    price: 1047.20,
+    change: 6.30,
+    percent: 0.61,
     isUp: true,
     mcap: '₹6.15 Lakh Cr',
     pe: '24.6',
     high52: '₹1,620.00',
-    low52: '₹1,240.00',
+    low52: '₹982.40',
     volume: '4.8M',
     yield: '2.40%',
     sector: 'Information Technology'
@@ -160,10 +160,10 @@ export default function InteractiveDashboard() {
     return { ltp: defaultLtp, change: defaultChange };
   };
 
-  const relData = getLtpAndChange('RELIANCE', '2985.40', '+3.2%');
+  const relData = getLtpAndChange('RELIANCE', '1304.00', '+0.04%');
   const tcsData = getLtpAndChange('TCS', '4105.10', '+2.8%');
-  const hdfcData = getLtpAndChange('HDFCBANK', '1650.00', '+1.5%');
-  const infyData = getLtpAndChange('INFY', '1480.90', '+1.2%');
+  const hdfcData = getLtpAndChange('HDFCBANK', '801.05', '+0.65%');
+  const infyData = getLtpAndChange('INFY', '1047.20', '+0.61%');
   const itcData = getLtpAndChange('ITC', '425.60', '-1.8%');
   const tataData = getLtpAndChange('TATAMOTORS', '985.40', '-0.5%');
 

@@ -100,6 +100,65 @@ export async function getAngelOneSession() {
   return cachedSession;
 }
 
+// Map of NSE tokens to Yahoo Finance tickers
+const TOKEN_TO_YAHOO: Record<string, { tradingSymbol: string, yahooSymbol: string }> = {
+  '2885': { tradingSymbol: 'RELIANCE-EQ', yahooSymbol: 'RELIANCE.NS' },
+  '11536': { tradingSymbol: 'TCS-EQ', yahooSymbol: 'TCS.NS' },
+  '1333': { tradingSymbol: 'HDFCBANK-EQ', yahooSymbol: 'HDFCBANK.NS' },
+  '1594': { tradingSymbol: 'INFY-EQ', yahooSymbol: 'INFY.NS' },
+  '1660': { tradingSymbol: 'ITC-EQ', yahooSymbol: 'ITC.NS' },
+  '10893': { tradingSymbol: 'ICICIBANK-EQ', yahooSymbol: 'ICICIBANK.NS' },
+  '3456': { tradingSymbol: 'TATAMOTORS-EQ', yahooSymbol: 'TATAMOTORS.NS' }
+};
+
+// Robust fallback fetch using Yahoo Finance API (no keys, no whitelisting required)
+async function fetchYahooQuotes(tokens: string[]) {
+  console.log('[MarketData] Falling back to Yahoo Finance for tokens:', tokens);
+  try {
+    const promises = tokens.map(async (token) => {
+      const mapping = TOKEN_TO_YAHOO[token];
+      if (!mapping) return null;
+
+      try {
+        const res = await fetch(`https://query1.finance.yahoo.com/v8/finance/chart/${mapping.yahooSymbol}?interval=1d&range=1d`);
+        if (!res.ok) throw new Error(`Yahoo HTTP ${res.status}`);
+        const data = await res.json();
+        const meta = data.chart?.result?.[0]?.meta;
+        if (!meta) throw new Error('Yahoo invalid response meta');
+
+        const ltp = meta.regularMarketPrice;
+        const close = meta.chartPreviousClose || ltp;
+        const netChange = ltp - close;
+        const percentChange = close !== 0 ? (netChange / close) * 100 : 0;
+
+        return {
+          exchange: 'NSE',
+          tradingSymbol: mapping.tradingSymbol,
+          symbolToken: token,
+          ltp: ltp,
+          open: close,
+          high: ltp,
+          low: ltp,
+          close: close,
+          netChange: netChange,
+          percentChange: percentChange,
+          volume: meta.regularMarketVolume || 0,
+          depth: { buy: [], sell: [] }
+        };
+      } catch (err) {
+        console.warn(`[MarketData] Yahoo fetch failed for ${mapping.yahooSymbol}:`, err);
+        return null;
+      }
+    });
+
+    const results = await Promise.all(promises);
+    return results.filter((r) => r !== null);
+  } catch (err) {
+    console.error('[MarketData] Yahoo fallback failed completely:', err);
+    return null;
+  }
+}
+
 // Query live stock details from Angel One SmartAPI using NSE tokens
 export async function getLiveStockQuotes(tokens: string[]) {
   try {
@@ -131,8 +190,9 @@ export async function getLiveStockQuotes(tokens: string[]) {
     }
 
     return data.data.fetched;
-  } catch (error) {
-    console.error('Error fetching live quotes:', error);
-    return null;
+  } catch (error: any) {
+    console.warn('Angel One API failed, switching to Yahoo Finance fallback:', error?.message || error);
+    return fetchYahooQuotes(tokens);
   }
 }
+

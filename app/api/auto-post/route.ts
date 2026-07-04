@@ -290,12 +290,6 @@ CRITICAL WRITING RULES:
         "1568605114967-8130f3a36994",  // city office towers
         "1486312338219-ce68d2c6f44d",  // global trading
       ],
-      "Pre-Market Brief": [
-        "1535320903710-a234b4ae2e0a",
-        "1486312338219-ce68d2c6f44d",
-        "1590283603385-17d9c6f3f0b4",
-        "1486304873000-235643847519",
-      ],
     };
 
     // Simple deterministic hash of title → consistent image per post
