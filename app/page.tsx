@@ -37,7 +37,7 @@ export default function Home() {
             </h2>
             <Link href={`/blog/${featuredPost.slug}`} style={{ textDecoration: 'none' }}>
               <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden', minHeight: '400px' }}>
-                <div style={{ flex: 1, background: `url(${featuredPost.coverImage}) center/cover no-repeat`, minHeight: '300px', position: 'relative' }}>
+                <div style={{ flex: 1, background: `url("${featuredPost.coverImage}") center/cover no-repeat`, minHeight: '300px', position: 'relative' }}>
                   <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, var(--secondary), transparent)' }}></div>
                 </div>
                 <div style={{ padding: '40px', position: 'relative', zIndex: 2, marginTop: '-100px' }}>
@@ -60,7 +60,7 @@ export default function Home() {
             {gridPosts.map(({ slug, date, title, excerpt, category, coverImage }) => (
               <Link href={`/blog/${slug}`} key={slug} style={{ textDecoration: 'none' }}>
                 <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', height: '100%', overflow: 'hidden' }}>
-                  <div style={{ height: '200px', background: `url(${coverImage}) center/cover no-repeat`, borderBottom: '1px solid var(--glass-border)' }}></div>
+                  <div style={{ height: '200px', background: `url("${coverImage}") center/cover no-repeat`, borderBottom: '1px solid var(--glass-border)' }}></div>
                   <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', flex: 1 }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
                       <span style={{ color: 'var(--primary)', fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px' }}>{category}</span>
